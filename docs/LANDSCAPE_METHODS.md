@@ -16,7 +16,7 @@ Use the same fixed ten representative categories as Part 1 (1, 3, 5, 9, 14, 16, 
 
 Chart 6 uses a common zero-based 0–1.5 million km² axis for both endpoint types. Larger hollow diamonds represent historical estimates and smaller filled circles represent extant vegetation. Different shapes remain recognisable when endpoint values are nearly equal. Positions remain exact; no horizontal displacement or nonlinear scale is applied. The connecting rule pairs a category's two estimates; it does not show a continuous trend. The default discovery identifies the greatest absolute area difference among the ten displayed groups (Eucalypt Woodlands, 396,886 km² smaller).
 
-Chart 7 uses a zero-based 0–100% scale and a stem from zero to each point. The default discovery identifies the lowest same-category overlap among the ten groups (Eucalypt Open Forests, 46.0%). Clicking either chart or using the dropdown highlights the same category in both charts and updates both discovery annotations. Part 3 focus is independent of Parts 1 and 2.
+Chart 7 uses a zero-based 0–100% scale and a stem from zero to each point. The default discovery identifies the lowest same-category overlap among the ten groups (Eucalypt Open Forests, 46.0%). Clicking either chart highlights the same category in both charts and updates both discovery annotations. Clicking the selected category again clears the focus. Part 3 focus is independent of Parts 1 and 2.
 
 ## Implementation
 

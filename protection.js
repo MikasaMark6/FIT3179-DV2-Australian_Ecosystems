@@ -21,7 +21,6 @@
   function selectVegetation(code){
     vegetationFocus=Number(code)||0;
     if(views['vegetation-protection'])views['vegetation-protection'].signal('vegetationFocus',vegetationFocus).runAsync();
-    el('protection-vegetation').value=String(vegetationFocus);el('protection-vegetation-clear').disabled=!vegetationFocus;
     const row=vegetationFocus?vegetation.find(r=>r.mvg_code===vegetationFocus):vegetation.filter(r=>r.default_comparison).reduce((a,b)=>a.mapped_protection_pct<b.mapped_protection_pct?a:b);
     el('vegetation-protection-insight').textContent=`${row.mvg_name}: ${row.mapped_protection_pct.toFixed(1)}% of its extant area is covered by public CAPAD boundaries${vegetationFocus?'.':', the lowest share among these ten types.'}`;
   }
@@ -60,7 +59,6 @@
       const load=async u=>{const r=await fetch(u);if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
       [regions,vegetation,boundaries,...specs]=await Promise.all(['data/chart08_09_ibra_protection.json','data/chart10_public_protection.json','data/ibra71_regions.topojson','specs/chart08_protection_choropleth.vl.json','specs/chart09_protection_symbols.vl.json','specs/chart10_vegetation_protection.vl.json'].map(load));
       applicable().sort((a,b)=>a.bioregion_name.localeCompare(b.bioregion_name)).forEach(r=>{const o=document.createElement('option');o.value=r.bioregion_code;o.textContent=r.bioregion_name;el('protection-region').appendChild(o);});
-      vegetation.filter(r=>r.default_comparison).sort((a,b)=>b.mapped_protection_pct-a.mapped_protection_pct).forEach(r=>{const o=document.createElement('option');o.value=r.mvg_code;o.textContent=r.mvg_name;el('protection-vegetation').appendChild(o);});
       el('protection-insight').textContent=`13 of 87 bioregions with applicable terrestrial statistics have less than 5% of their land protected.`;
       const largest=applicable().reduce((a,b)=>a.protected_area_km2>b.protected_area_km2?a:b);
       el('protection-area-insight').textContent=`${largest.bioregion_name} has the largest protected area: ${format(largest.protected_area_km2)} km², covering ${largest.protected_pct.toFixed(1)}% of the bioregion.`;
@@ -68,8 +66,6 @@
       el('protection-view').addEventListener('change',draw);
       el('protection-region').addEventListener('change',async e=>{const code=e.target.value;if(['PSI','ITI'].includes(code)&&el('protection-view').value!=='all'){el('protection-view').value='all';await draw();}selectRegion(code);});
       el('protection-clear').addEventListener('click',()=>selectRegion(''));
-      el('protection-vegetation').addEventListener('change',e=>selectVegetation(e.target.value));
-      el('protection-vegetation-clear').addEventListener('click',()=>selectVegetation(0));
       let timer,previous=window.innerWidth;window.addEventListener('resize',()=>{if(previous===window.innerWidth)return;previous=window.innerWidth;clearTimeout(timer);timer=setTimeout(draw,250);});
     }catch(e){console.error(e);el('protection-status').textContent='Protection data could not load. '+e.message;}
   }

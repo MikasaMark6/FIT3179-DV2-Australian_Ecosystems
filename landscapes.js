@@ -11,13 +11,12 @@
     const low=focus?remaining.find(d=>d.mvg_code===focus):remaining.filter(d=>d.default_comparison).reduce((a,b)=>a.same_category_remaining_pct<b.same_category_remaining_pct?a:b);
     el('remaining-insight').textContent=`${low.mvg_name}: ${low.same_category_remaining_pct.toFixed(1)}% of its estimated historical area is still mapped as the same vegetation category.`;
     el('landscape-selection').textContent=focus?largest.mvg_name:'All 10 comparison types';
-    el('landscape-clear').disabled=!focus;
   }
   function setFocus(code){
     focus=Number(code)||0;
     if(focus&&!comparison().some(d=>d.mvg_code===focus))focus=0;
     for(const v of Object.values(views))v.signal('landscapeFocus',focus).runAsync();
-    el('landscape-focus').value=String(focus);annotations();
+    annotations();
   }
   async function embed(id,spec,data){
     const s=JSON.parse(JSON.stringify(spec));
@@ -31,7 +30,7 @@
     views[id].addEventListener('click',(_event,item)=>{if(item?.datum?.mvg_code)setFocus(focus===item.datum.mvg_code?0:item.datum.mvg_code);});
   }
   function draw(){
-    queue=queue.then(async()=>{await embed('extent-chart',specs[0],pairs);await embed('remaining-chart',specs[1],remaining);annotations();el('landscape-status').textContent='Hover for both area estimates or the overlap percentage. Click a point or line to focus on a type.';})
+    queue=queue.then(async()=>{await embed('extent-chart',specs[0],pairs);await embed('remaining-chart',specs[1],remaining);annotations();el('landscape-status').textContent='Hover for both area estimates or the overlap percentage. Click a point or line to focus on a type in both charts; click the same type again to clear.';})
       .catch(e=>{console.error(e);el('landscape-status').textContent='Landscape charts could not load. '+e.message;});
     return queue;
   }
@@ -39,10 +38,7 @@
     try{
       const load=async url=>{const r=await fetch(url);if(!r.ok)throw Error(url+': HTTP '+r.status);return r.json();};
       [pairs,remaining,...specs]=await Promise.all([load('data/chart06_pre1750_vs_extant.json'),load('data/chart07_same_category_remaining.json'),load('specs/chart06_connected_dot.vl.json'),load('specs/chart07_lollipop.vl.json')]);
-      comparison().sort((a,b)=>b.estimated_pre1750_km2-a.estimated_pre1750_km2).forEach(d=>{const option=document.createElement('option');option.value=d.mvg_code;option.textContent=d.mvg_name;el('landscape-focus').appendChild(option);});
       await draw();
-      el('landscape-focus').addEventListener('change',e=>setFocus(e.target.value));
-      el('landscape-clear').addEventListener('click',()=>setFocus(0));
       let timer,previous=window.innerWidth;window.addEventListener('resize',()=>{if(previous===window.innerWidth)return;previous=window.innerWidth;clearTimeout(timer);timer=setTimeout(draw,250);});
     }catch(e){console.error(e);el('landscape-status').textContent='Landscape data could not load. '+e.message;}
   }

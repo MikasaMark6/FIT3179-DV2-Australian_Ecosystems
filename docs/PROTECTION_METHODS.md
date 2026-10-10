@@ -19,7 +19,7 @@ The protected-area mask retains `NRS_PA` Y/I, `OVERLAP = 1`, and terrestrial or 
 
 The green bar segment is **covered by public boundaries**; the grey segment is **not covered by public boundaries**. Some private-land covenant information is omitted from the public spatial data. Grey therefore does not establish that land is unprotected. The public spatial total differs from the official national total by about 0.342%; this is not a vegetation-level uncertainty bound and is not used to scale any vegetation result. Unknown classes, missing coverage and coastal rasterisation also affect interpretation.
 
-Hover exposes the group's full name, both percentages and hectare totals. Clicks and the independent vegetation menu highlight one bar and update its discovery annotation. Region selection does not filter vegetation bars, because Chart 10 contains national vegetation totals, not bioregional intersections.
+Hover exposes the group's full name, both percentages and hectare totals. Clicking a bar highlights that vegetation type and updates its discovery annotation; clicking it again clears the focus. Region selection does not filter vegetation bars, because Chart 10 contains national vegetation totals, not bioregional intersections.
 
 ## Validated discoveries
 
