@@ -1,9 +1,9 @@
 {
   "default": {
     "map": {
-      "width": 709,
-      "height": 678.4129822198946,
-      "rows": 105280
+      "width": 725,
+      "height": 693.7227251190741,
+      "rows": 11
     },
     "bar": {
       "width": 737,
@@ -16,24 +16,22 @@
       "rows": 80
     }
   },
-  "all": {
-    "bar": {
-      "rows": 25,
-      "width": 737,
-      "height": 850
-    },
-    "heatmap": {
-      "rows": 200,
-      "width": 737,
-      "height": 850
-    }
-  },
+  "all": {},
   "signals": {
     "map": 20,
     "bar": 20,
     "heatmap": 20
   },
   "state_denominators": true,
+  "self_contained_map": true,
+  "fixed_comparison_types": 10,
+  "chart_click_toggle_checks": "bar and heatmap passed",
+  "map_visible_marks": {
+    "normal": 1,
+    "focused": 2
+  },
+  "map_cell_lookup_checks": 105280,
+  "map_rendering": "At most two visible SVG image marks; lookup uses original display-grid cells.",
   "method": "Node Vega runtime compilation, SVG rendering and signal checks. Full DOM/browser layout not tested.",
   "versions": {
     "vega": "5.33.0",
