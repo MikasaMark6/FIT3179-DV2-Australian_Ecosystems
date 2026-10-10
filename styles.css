@@ -92,3 +92,10 @@ footer{padding:22px 0 30px}
 .processing-details li{margin:8px 0}
 @media(max-width:850px){.map-layout{grid-template-columns:1fr}.wrap{padding:0 20px}}
 @media(max-width:520px){.wrap{padding:0 12px}h1{font-size:44px}.chart-card{padding:14px}.card-heading h2{font-size:24px}}
+
+.bird-controls{display:flex;gap:14px;flex-wrap:wrap;padding:12px 14px;background:#e8ecdf;border:1px solid #d4dccb;border-radius:6px}
+.bird-controls>div{flex:1;min-width:210px}
+.bird-controls label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.bird-controls select{width:100%}
+#bird-status{font-size:13px;color:var(--muted);margin:8px 0 12px;min-height:20px}
+#bird-map canvas{cursor:crosshair}
