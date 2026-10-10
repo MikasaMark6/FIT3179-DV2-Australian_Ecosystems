@@ -121,3 +121,7 @@ footer{padding:22px 0 30px}
 .period-dot.extant{background:#315d49;border-color:#315d49}
 #landscape-status{font-size:13px;color:var(--muted);margin:8px 0}
 #extent-chart svg,#remaining-chart svg{display:block;max-width:100%;height:auto}
+
+/* Distinct endpoint shapes remain identifiable at nearly equal area values. */
+.period-dot.historical{border-radius:0;transform:rotate(45deg);width:10px;height:10px;margin:0 2px}
+.period-dot.extant{width:9px;height:9px}

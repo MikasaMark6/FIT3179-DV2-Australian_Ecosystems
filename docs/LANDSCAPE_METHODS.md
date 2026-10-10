@@ -14,7 +14,7 @@ Chart 7 divides the same-category cross-tabulation diagonal by that category's h
 
 Use the same fixed ten representative categories as Part 1 (1, 3, 5, 9, 14, 16, 18, 19, 20, 23). Full 25-class statistics remain in the data. Chart 6 is ordered by estimated historical area; Chart 7 is ordered by same-category remaining percentage, ascending. Neither chart totals the displayed subset as all Australian vegetation.
 
-Chart 6 uses a common zero-based 0–1.5 million km² axis for both endpoint types. Hollow points represent historical estimates and filled points represent extant vegetation. The connecting rule pairs a category's two estimates; it does not show a continuous trend. The default discovery identifies the greatest absolute area difference among the ten displayed groups (Eucalypt Woodlands, 396,886 km² smaller).
+Chart 6 uses a common zero-based 0–1.5 million km² axis for both endpoint types. Larger hollow diamonds represent historical estimates and smaller filled circles represent extant vegetation. Different shapes remain recognisable when endpoint values are nearly equal. Positions remain exact; no horizontal displacement or nonlinear scale is applied. The connecting rule pairs a category's two estimates; it does not show a continuous trend. The default discovery identifies the greatest absolute area difference among the ten displayed groups (Eucalypt Woodlands, 396,886 km² smaller).
 
 Chart 7 uses a zero-based 0–100% scale and a stem from zero to each point. The default discovery identifies the lowest same-category overlap among the ten groups (Eucalypt Open Forests, 46.0%). Clicking either chart or using the dropdown highlights the same category in both charts and updates both discovery annotations. Part 3 focus is independent of Parts 1 and 2.
 
@@ -23,3 +23,10 @@ Chart 7 uses a zero-based 0–100% scale and a stem from zero to each point. The
 landscapes.js loads readable specs/chart06_connected_dot.vl.json and specs/chart07_lollipop.vl.json, embeds their data from the packaged datasets, and adjusts their width for the container. Both render through Vega-Lite as SVG. The specification data URLs are relative to the specs folder; the web module loads data explicitly from data/. Both JSON specifications include the label calculation and filtering needed for the ten-type display.
 
 AI assistance with processing, code and text should be acknowledged under the unit requirements.
+
+## Official provenance and uncertainty
+
+NVIS is compiled from Australian, state and territory government vegetation data. The official Pre-1750 MVG metadata explicitly identifies a comparable extant dataset. It states that v7 historical data were unchanged from v6 while some jurisdictions' extant data were updated. Historical estimates compile sources of differing scales and dates, including gap-filling. A 100 m grid does not establish uniform 100 m source accuracy. Same-version comparison does not eliminate uncertainty or classification differences.
+
+https://www.dcceew.gov.au/environment/environment-information-australia/national-vegetation-information-system
+https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/NVIS_pre_mvg/MapServer/0/metadata?f=html&format=default

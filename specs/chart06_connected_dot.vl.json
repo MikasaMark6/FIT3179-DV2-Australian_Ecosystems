@@ -135,12 +135,12 @@
     {
       "mark": {
         "type": "point",
-        "shape": "circle",
+        "shape": "diamond",
         "filled": true,
         "fill": "#fffdf7",
         "stroke": "#85956d",
         "strokeWidth": 2,
-        "size": 85,
+        "size": 170,
         "cursor": "pointer"
       },
       "encoding": {
@@ -219,7 +219,7 @@
         "filled": true,
         "fill": "#315d49",
         "stroke": "#315d49",
-        "size": 85,
+        "size": 55,
         "cursor": "pointer"
       },
       "encoding": {
