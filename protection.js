@@ -26,7 +26,7 @@
   }
   async function embedMap(id,index){
     const s=JSON.parse(JSON.stringify(specs[index]));
-    s.width=Math.max(240,Math.floor(el(id).clientWidth));s.height=Math.round(s.width*(el('protection-view').value==='all'?.62:.78));
+    s.width=Math.max(240,Math.floor(el(id).clientWidth));s.height=Math.round(s.width*(el('protection-view').value==='all'?.60:.74));
     // Projection fits the filtered boundary geometry, including curved geographic edges.
     s.params[0].value=regionFocus;s.data={values:boundaries,format:{type:'topojson',feature:'regions'}};
     const allowed=visible().map(r=>r.bioregion_code);

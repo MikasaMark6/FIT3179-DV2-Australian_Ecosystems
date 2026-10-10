@@ -4,7 +4,7 @@
 
 Source: DCCEEW CAPAD 2024 terrestrial national statistics, snapshot 30 June 2024, joined by region code to IBRA 7.1 boundaries. The prepared table contains 89 unique codes, all matched to the boundary dataset. Official region areas and protected areas are retained; display geometry is never used to calculate their percentages.
 
-- Chart 8: protected area / bioregion area × 100, using bands 0–<5%, 5–<10%, 10–<17%, 17–<30%, and 30–100%. These are descriptive display bands, rather than ecological quality thresholds or a claim that each region has a 30% policy obligation.
+- Chart 8: protected area / bioregion area × 100, using bands 0–<5%, 5–<10%, 10–<17%, 17–<30%, 30–<60%, and 60–100%. These are descriptive display bands, rather than ecological quality thresholds or a claim that each region has a 30% policy obligation.
 - Chart 9: protected area in km² is mapped to circle area, using a linear size scale with zero area at zero value. Representative points lie inside the largest region component. They identify regional summaries, not reserve positions. Smaller symbols are drawn above larger symbols. The region menu provides access to small or overlapping symbols without shifting their geographic positions.
 - Coral Sea (COS) and Subantarctic Islands (SAI) have no applicable terrestrial comparison and are excluded, rather than treated as zero protection. Of the remaining 87 regions, 85 appear in the main view; Indian Tropical Islands (ITI) and Pacific Subtropical Islands (PSI) are included in the all-region view. Selecting either through the menu switches to that view.
 - Both maps use Albers equal-area (Vega `conicEqualArea`), rotated to 134° E with standard parallels 18° S and 36° S. Projection extent fits the visible geometry. Boundaries were simplified at 500 m in EPSG:9473 for display; all statistics remain official table values.
@@ -24,6 +24,7 @@ Hover exposes the group's full name, both percentages and hectare totals. Clicki
 ## Validated discoveries
 
 - 13 of 87 bioregions with applicable terrestrial statistics have protection below 5%.
+- 24 applicable regions fall in 30–<60% protection and 6 in 60–100%.
 - Great Sandy Desert has the largest official protected area, approximately 197,096 km² (49.9% of its bioregion).
 - Tussock Grasslands has approximately 7.4% public boundary coverage, the lowest among the ten displayed vegetation types.
 
