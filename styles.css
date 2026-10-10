@@ -160,13 +160,9 @@ footer{padding:22px 0 30px}
 .national-stat strong{font:400 30px Georgia,serif;color:var(--ink)}
 @media(max-width:700px){.waffle-layout{grid-template-columns:1fr;gap:10px}.waffle-layout aside{max-width:none}}
 
-/* Protection has a distinct teal identity; the final chart reads text then graphic. */
-.coverage-key.covered{background:#246875}
-.waffle-layout{grid-template-columns:minmax(0,1fr) 380px;gap:28px;align-items:center}
-.waffle-layout aside{max-width:440px}
-.national-stat{grid-template-columns:18px auto;column-gap:10px;row-gap:2px;margin:12px 0}
-.national-stat strong{font-size:38px;line-height:1.1}
-.national-stat>span:last-child{grid-column:2;font-size:13px;color:var(--muted)}
-.national-finding{font-size:14px;line-height:1.5;margin:12px 0}
-#waffle-detail{font-size:13px;color:var(--muted);line-height:1.5;margin:10px 0}
-@media(max-width:700px){.waffle-layout{grid-template-columns:1fr;gap:12px}.waffle-layout aside{max-width:none}.national-stat{display:inline-grid;margin:8px 24px 8px 0}.national-stat strong{font-size:32px}}
+/* Keep the waffle explanation close to the plot and match its coverage key. */
+.coverage-key.covered{background:#315d49}
+.waffle-layout{grid-template-columns:340px minmax(0,1fr);gap:18px;justify-content:start;align-items:center}
+.waffle-layout aside{justify-self:start;width:100%;max-width:420px}
+.waffle-layout aside p{font-size:13px;line-height:1.5;margin:9px 0}
+@media(max-width:700px){.waffle-layout{grid-template-columns:1fr;gap:10px}.waffle-layout aside{max-width:none}}

@@ -34,7 +34,7 @@
   function draw(){queue=queue.then(drawCharts).catch(e=>{console.error(e);el('balance-status').textContent='Final comparisons could not load. '+e.message;});return queue;}
   async function start(){
     try{
-      const load=async u=>{const r=await fetch(u);if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
+      const load=async u=>{const r=await fetch(u,u.startsWith('specs/')?{cache:'no-cache'}:{});if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
       let totals;[representation,totals,cells,...specs]=await Promise.all(['data/chart11_representation.json','data/chart12_national_protection.json','data/chart12_waffle_cells.json','specs/chart11_representation_butterfly.vl.json','specs/chart12_national_waffle.vl.json'].map(load));national=totals[0];
       el('national-protected-value').textContent=national.protected_pct.toFixed(2)+'%';el('national-remainder-value').textContent=national.not_protected_pct.toFixed(2)+'%';
       el('national-insight').textContent=`${national.protected_pct.toFixed(2)}% of national land was protected on 30 June 2024 — about ${(national.protected_area_ha/100).toLocaleString('en-AU',{maximumFractionDigits:0})} km².`;

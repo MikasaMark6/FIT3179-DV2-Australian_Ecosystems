@@ -56,7 +56,7 @@
   }
   async function start(){
     try{
-      const load=async u=>{const r=await fetch(u);if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
+      const load=async u=>{const r=await fetch(u,u.startsWith('specs/')?{cache:'no-cache'}:{});if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
       [regions,vegetation,boundaries,...specs]=await Promise.all(['data/chart08_09_ibra_protection.json','data/chart10_public_protection.json','data/ibra71_regions.topojson','specs/chart08_protection_choropleth.vl.json','specs/chart09_protection_symbols.vl.json','specs/chart10_vegetation_protection.vl.json'].map(load));
       applicable().sort((a,b)=>a.bioregion_name.localeCompare(b.bioregion_name)).forEach(r=>{const o=document.createElement('option');o.value=r.bioregion_code;o.textContent=r.bioregion_name;el('protection-region').appendChild(o);});
       el('protection-insight').textContent=`13 of 87 bioregions with applicable terrestrial statistics have less than 5% of their land protected.`;
