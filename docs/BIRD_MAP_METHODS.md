@@ -17,3 +17,7 @@ Chart 4 is a standalone ALA record module. It has no spatial join to NVIS.
 ## Interaction
 
 Hover shows the grid ID, species count, record count, observation year and grid centre. Extent changes redraw the map; minimum-record changes update a Vega signal. Colour scale remains 0–350 across both controls to preserve comparability. Part 1 selection remains independent.
+
+## Data discovery annotation
+
+The annotation counts displayed grids with at least 200 recorded species, then reports how many have centre longitude at least 140 degrees east. It updates with extent and record-count filters. Default: 94 of 100 high-richness displayed grids are east of 140 degrees east. This describes recorded patterns, without attributing cause or correcting effort.

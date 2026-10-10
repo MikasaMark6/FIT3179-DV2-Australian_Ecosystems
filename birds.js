@@ -10,6 +10,9 @@
   function updateSummary() {
     const minimum = Number(el('bird-minimum').value);
     const rows = selectedFeatures().filter(f => f.properties.record_count >= minimum);
+    const high=rows.filter(f=>f.properties.recorded_species_richness>=200);
+    const eastern=high.filter(f=>f.properties.longitude>=140).length;
+    el('bird-insight').textContent=high.length?`${eastern} of ${high.length} displayed grids with at least 200 recorded species lie east of 140° E.`:'No displayed grids have at least 200 recorded species.';
     el('bird-status').textContent = `${rows.length.toLocaleString('en-AU')} of ${selectedFeatures().length.toLocaleString('en-AU')} recorded grids shown · ${minimum ? `At least ${minimum.toLocaleString('en-AU')} records per grid` : 'All record counts'}`;
   }
   function buildSpec() {
@@ -52,7 +55,10 @@
       updateSummary();
     }).catch(error => {
       console.error(error);
-      el('bird-status').textContent = 'Bird map could not load. '+error.message;
+      const high=rows.filter(f=>f.properties.recorded_species_richness>=200);
+    const eastern=high.filter(f=>f.properties.longitude>=140).length;
+    el('bird-insight').textContent=high.length?`${eastern} of ${high.length} displayed grids with at least 200 recorded species lie east of 140° E.`:'No displayed grids have at least 200 recorded species.';
+    el('bird-status').textContent = 'Bird map could not load. '+error.message;
     });
     return queue;
   }

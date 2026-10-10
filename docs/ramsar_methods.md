@@ -4,9 +4,9 @@ The official spatial service contained 120 boundary records. Grouping by `REFCOD
 
 A site can contain multiple wetland areas and polygons. Geometries were grouped by site code, projected to EPSG:9473, and represented by an interior point in the largest polygon component. Points were transformed back to EPSG:4326. All 67 representative points were checked against their projected site geometries.
 
-## Planned chart and interpretation
+## Chart and interpretation
 
-Use equal-size dots to show site locations, with site name, state or territory, and designation dates in the tooltip. Preserve multiple source designation dates rather than inventing a single first designation date.
+The implemented chart uses equal-size dots to show site locations, with site name, state or territory, and designation dates in the tooltip. Preserve multiple source designation dates rather than inventing a single first designation date.
 
 Each dot marks one Ramsar site; a site can include several wetland areas. This is a list of internationally important wetlands, not a complete wetland inventory or a species-richness or protection-adequacy assessment.
 
@@ -23,3 +23,10 @@ DCCEEW Ramsar Wetlands. CC BY 4.0; attribution: Commonwealth of Australia (DCCEE
 - https://www.arcgis.com/sharing/rest/content/items/7be865b1681d4abfa305fba67d5b27d1/info/metadata/metadata.xml?format=default&output=html
 
 Processing and checks were assisted by ChatGPT/Codex. Disclose assistance according to the unit requirements.
+
+## Implemented interaction and coverage
+
+The default view displays 63 site points within the mainland/Tasmania regional bounds (110–156 degrees east, 45–9 degrees south). Four external-territory sites are outside this view: Hosnies Spring, The Dales, Pulu Keeling, and Elizabeth and Middleton Reefs. The page discloses this and offers an all-locations view displaying all 67. Selecting External territories automatically selects the broader extent. State filtering changes displayed dots without changing dot size or map extent. Hover shows site name, code, jurisdiction and source designation dates. Clicking pins site details and highlights the selected location; a ring denotes selection only. IBRA 7.1 is a contextual base map; no Ramsar/IBRA spatial statistics are computed.
+
+Ecological context: https://www.dcceew.gov.au/water/wetlands/publications/factsheet-wetlands-biodiversity
+Wetlands provide feeding, nesting and refuge habitat for waterbirds and other wildlife. The Ramsar locations are not spatially joined to ALA observations and do not establish an explanation for bird-richness patterns.

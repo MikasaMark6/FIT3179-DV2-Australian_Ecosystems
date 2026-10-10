@@ -99,3 +99,18 @@ footer{padding:22px 0 30px}
 .bird-controls select{width:100%}
 #bird-status{font-size:13px;color:var(--muted);margin:8px 0 12px;min-height:20px}
 #bird-map canvas{cursor:crosshair}
+
+/* Consistent chapter labels and short narrative transitions. */
+.chapter-intro{display:block}
+.chapter-intro .eyebrow{color:#647957;margin-bottom:8px}
+.chapter-intro h2{margin:0 0 10px}
+.chapter-lead{font-size:16px;line-height:1.6;max-width:900px}
+.story-bridge{padding:14px 0 10px;max-width:900px}
+.story-bridge h3{font-size:23px;margin:0 0 8px}
+.story-bridge p{margin:0;font-size:16px;line-height:1.6}
+.chapter-close{padding-bottom:16px}
+#wetland-status{font-size:13px;color:var(--muted);margin:8px 0 12px;min-height:20px}
+#wetland-map canvas{cursor:pointer}
+#wetland-clear{font-size:12px;min-height:32px;padding:6px 9px;margin-top:12px}
+
+.hero-subtitle{font-size:clamp(20px,2.1vw,25px);max-width:880px;line-height:1.4}

@@ -39,3 +39,7 @@ The approximately 5 km compact categorical grid is encoded losslessly into a bas
 
 Map dependency repair
 The deployed external display-image path returned HTTP 404. The same verified lossless base PNG and the ten selected MVG masks are now embedded as data URLs in app.js. The compact display grid remains the pointer-lookup input; original statistical data are unchanged. All vegetation comparison charts in the current page use a fixed ten-type subset with full 25-type denominators.
+
+## Part 1 discovery annotations
+
+Map annotation: the state with the largest mapped area for the selected MVG, divided by its national mapped area. Default is Hummock Grasslands: Western Australia contains 59.2% of the mapped national total. These are original 100 m area statistics, not display-cell estimates. Bar annotation shows selected type area and share of all 25 classified native MVGs. Heatmap annotation identifies the state where the selected group has the largest share of classified native vegetation; without focus it shows the overall maximum. Map, bar and heatmap annotations update together. State composition retains all 25 classified native groups as its denominator.

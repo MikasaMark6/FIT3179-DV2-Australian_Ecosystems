@@ -23,6 +23,16 @@ function announceFocus(){
  $('status').textContent=focus?`Selected: ${d.mvg_name}. All three charts highlight this type; percentages remain unchanged.`:'Ready · Hover for details. Click a map location, bar or heatmap cell to highlight a type.';
  $('selection-name').textContent=focus?d.mvg_name:'All 10 comparison types';
  $('clear').disabled=focus===0;
+ updateInsights();
+}
+function updateInsights(){
+ const code=focus||20,d=areas.find(r=>r.mvg_code===code);
+ const spatial=stateRows.filter(r=>r.mvg_code===code).reduce((a,b)=>a.native_area_ha>b.native_area_ha?a:b);
+ $('map-insight').textContent=`${spatial.state_name} contains ${(spatial.native_area_ha/(d.extent_km2*100)*100).toFixed(1)}% of Australia's mapped ${d.mvg_name.toLowerCase()} area.`;
+ $('area-insight').textContent=`${d.mvg_name} cover ${(d.extent_km2/1e6).toFixed(2)} million km² — ${d.share_of_classified_native_pct.toFixed(1)}% of classified native vegetation nationally.`;
+ const rows=focus?stateRows.filter(r=>r.mvg_code===focus):stateRows;
+ const peak=rows.reduce((a,b)=>a.share_of_state_classified_native_pct>b.share_of_state_classified_native_pct?a:b);
+ $('state-insight').textContent=`${peak.mvg_name} account for ${peak.share_of_state_classified_native_pct.toFixed(1)}% of classified native vegetation in ${peak.state_name}.`;
 }
 function applyFocus(){
  for(const v of Object.values(views))v.signal('focused',focus).runAsync();
