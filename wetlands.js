@@ -8,10 +8,14 @@
     const all=el('wetland-view').value==='all',state=el('wetland-state').value;
     return sites.filter(s=>(all||(s.longitude>=110&&s.longitude<=156&&s.latitude>=-45&&s.latitude<=-9))&&(state==='all'||s.state===state));
   }
+  function showDetails(site, pinned=false) {
+    el('wetland-name').textContent=site?.site_name||'Explore a wetland';
+    el('wetland-detail').textContent=site?`${pinned?'Selected site · ':''}${stateNames[site.state]||site.state} · Ramsar site ${site.site_code}. Designation date(s): ${site.designation_dates}.`:'Hover for details. Click a dot to keep its site information here; click it again to clear.';
+  }
   function inspect(site) {
     selected=site?.site_code||0;
-    el('wetland-name').textContent=site?.site_name||'Explore a wetland';
-    el('wetland-detail').textContent=site?`${stateNames[site.state]||site.state} · Ramsar site ${site.site_code}. Designation date(s): ${site.designation_dates}.`:'Hover for details. Click a dot to keep its site information here; click it again to clear.';
+    showDetails(site,Boolean(selected));
+    el('wetland-clear').disabled=!selected;
     if(view)view.signal('selectedSite',selected).runAsync();
   }
   function spec() {
@@ -19,7 +23,7 @@
     const all=el('wetland-view').value==='all';
     const [west,south,east,north]=all?[95,-45,162,-9]:[110,-45,156,-9];
     return {
-      $schema:'https://vega.github.io/schema/vega-lite/v5.json',background:null,width,height:Math.round(width*(all?0.65:0.85)),padding:8,
+      $schema:'https://vega.github.io/schema/vega-lite/v5.json',background:null,width,height:Math.round(width*(all?0.65:0.85)),padding:0,autosize:'none',
       config:{font:'Arial',view:{stroke:null}},
       projection:{type:'mercator',fit:{type:'Feature',geometry:{type:'Polygon',coordinates:[[[west,south],[west,north],[east,north],[east,south],[west,south]]]}}},
       params:[{name:'selectedSite',value:selected}],
@@ -38,8 +42,16 @@
     queue=queue.then(async()=>{
       if(!rows().some(s=>s.site_code===selected))selected=0;
       if(view)view.finalize();
-      view=(await vegaEmbed('#wetland-map',spec(),{renderer:'canvas',actions:false,tooltip:{theme:'light'}})).view;
+      // Native SVG targets avoid coordinate drift when a canvas is resized by CSS.
+      view=(await vegaEmbed('#wetland-map',spec(),{renderer:'svg',actions:false,tooltip:{theme:'light'}})).view;
       view.addEventListener('click',(_event,item)=>{if(item?.datum?.site_code)inspect(selected===item.datum.site_code?null:item.datum);});
+      view.addEventListener('pointermove',(_event,item)=>{
+        if(selected)return;
+        showDetails(item?.datum?.site_code?item.datum:null);
+      });
+      view.addEventListener('pointerleave',()=>{
+        showDetails(sites.find(s=>s.site_code===selected),Boolean(selected));
+      });
       inspect(sites.find(s=>s.site_code===selected));
       el('wetland-status').textContent=`${rows().length} of 67 sites shown · ${el('wetland-view').value==='all'?'Includes external-territory locations':'Four external-territory sites are outside this view; choose All site locations to include them'}`;
     }).catch(e=>{console.error(e);el('wetland-status').textContent='Wetland map could not load. '+e.message;});

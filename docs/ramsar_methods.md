@@ -30,3 +30,7 @@ The default view displays 63 site points within the mainland/Tasmania regional b
 
 Ecological context: https://www.dcceew.gov.au/water/wetlands/publications/factsheet-wetlands-biodiversity
 Wetlands provide feeding, nesting and refuge habitat for waterbirds and other wildlife. The Ramsar locations are not spatially joined to ALA observations and do not establish an explanation for bird-richness patterns.
+
+## Pointer interaction update
+
+The dot map uses SVG with zero outer padding and an explicit chart size. This avoids CSS scaling of a padded canvas and uses native SVG targets for hover and clicks. Without a selection, hovering updates Wetland Explorer. Clicking pins a site, so subsequent hovering retains that selection in the panel while tooltips remain available on other dots. Clicking the selected site again or Clear site selection unpins it.
