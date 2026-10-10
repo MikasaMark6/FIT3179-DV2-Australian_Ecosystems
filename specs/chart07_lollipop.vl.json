@@ -1,0 +1,213 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "width": 600,
+  "height": 300,
+  "padding": 8,
+  "params": [
+    {
+      "name": "landscapeFocus",
+      "value": 0
+    }
+  ],
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "titleFontWeight": "normal",
+      "labelColor": "#344b3f",
+      "titleColor": "#344b3f",
+      "gridColor": "#e4e8dd",
+      "domain": false,
+      "ticks": false,
+      "labelPadding": 8,
+      "titlePadding": 12
+    },
+    "legend": {
+      "labelFontSize": 13,
+      "titleFontSize": 13
+    }
+  },
+  "description": "Lollipop chart of historical cells that remain mapped as the same MVG, divided by the estimated pre-1750 area for that MVG. It is not extant total area divided by historical total area, nor an ecological-condition measure.",
+  "data": {
+    "url": "../data/chart07_same_category_remaining.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.default_comparison"
+    },
+    {
+      "calculate": "datum.mvg_code == 1 ? \"Rainforests & vine thickets\" : datum.mvg_code == 3 ? \"Open eucalypt forests\" : datum.mvg_code == 5 ? \"Eucalypt woodlands\" : datum.mvg_code == 9 ? \"Melaleuca forests & woodlands\" : datum.mvg_code == 14 ? \"Mallee woodlands & shrublands\" : datum.mvg_code == 16 ? \"Acacia shrublands\" : datum.mvg_code == 18 ? \"Heathlands\" : datum.mvg_code == 19 ? \"Tussock grasslands\" : datum.mvg_code == 20 ? \"Hummock grasslands\" : datum.mvg_code == 23 ? \"Mangroves\" : datum.mvg_name",
+      "as": "label"
+    },
+    {
+      "calculate": "datum.same_category_extant_ha / 100",
+      "as": "same_category_km2"
+    },
+    {
+      "calculate": "0",
+      "as": "baseline"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#aeb9a5",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "same_category_remaining_pct",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 265
+          }
+        },
+        "x": {
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false,
+            "zero": true
+          },
+          "axis": {
+            "title": "Historical area still mapped in the same category (%)",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ]
+          },
+          "field": "baseline"
+        },
+        "x2": {
+          "field": "same_category_remaining_pct"
+        },
+        "opacity": {
+          "condition": {
+            "test": "landscapeFocus == 0 || datum.mvg_code == landscapeFocus",
+            "value": 1
+          },
+          "value": 0.22
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "type": "nominal",
+            "title": "Vegetation type"
+          },
+          {
+            "field": "same_category_remaining_pct",
+            "type": "quantitative",
+            "title": "Same-category remaining (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "same_category_km2",
+            "type": "quantitative",
+            "title": "Same-category spatial overlap (km\u00b2)",
+            "format": ",.0f"
+          },
+          {
+            "field": "estimated_pre1750_ha",
+            "type": "quantitative",
+            "title": "Estimated pre-1750 area (ha)",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 110,
+        "color": "#315d49",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "label",
+          "type": "nominal",
+          "sort": {
+            "field": "same_category_remaining_pct",
+            "order": "ascending"
+          },
+          "axis": {
+            "title": null,
+            "labelLimit": 265
+          }
+        },
+        "x": {
+          "field": "same_category_remaining_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ],
+            "nice": false,
+            "zero": true
+          },
+          "axis": {
+            "title": "Historical area still mapped in the same category (%)",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": "landscapeFocus == 0 || datum.mvg_code == landscapeFocus",
+            "value": 1
+          },
+          "value": 0.22
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "type": "nominal",
+            "title": "Vegetation type"
+          },
+          {
+            "field": "same_category_remaining_pct",
+            "type": "quantitative",
+            "title": "Same-category remaining (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "same_category_km2",
+            "type": "quantitative",
+            "title": "Same-category spatial overlap (km\u00b2)",
+            "format": ",.0f"
+          },
+          {
+            "field": "estimated_pre1750_ha",
+            "type": "quantitative",
+            "title": "Estimated pre-1750 area (ha)",
+            "format": ",.0f"
+          }
+        ]
+      }
+    }
+  ]
+}

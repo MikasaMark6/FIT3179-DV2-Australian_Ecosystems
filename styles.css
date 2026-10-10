@@ -114,3 +114,10 @@ footer{padding:22px 0 30px}
 #wetland-clear{font-size:12px;min-height:32px;padding:6px 9px;margin-top:12px}
 
 .hero-subtitle{font-size:clamp(20px,2.1vw,25px);max-width:880px;line-height:1.4}
+
+.period-key{display:flex;flex-wrap:wrap;gap:18px;font-size:13px;margin:6px 0 14px;color:var(--muted)}
+.period-key>span{display:flex;align-items:center;gap:7px}
+.period-dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid #85956d;background:#fffdf7}
+.period-dot.extant{background:#315d49;border-color:#315d49}
+#landscape-status{font-size:13px;color:var(--muted);margin:8px 0}
+#extent-chart svg,#remaining-chart svg{display:block;max-width:100%;height:auto}
