@@ -8,7 +8,7 @@ Input: `data/chart11_representation.json`, prepared from NVIS v7.0 Extant MVG ar
 - Right: vegetation-type area within public protection boundaries / all classified-native area within those boundaries × 100.
 - Difference: right share minus left share, in percentage points.
 
-Each complete 25-type distribution sums to 100%; the ten displayed types are not a complete distribution. The two denominators are deliberately different. This comparison describes composition, whereas Chart 10 describes coverage within each vegetation type. Both horizontal magnitude scales run from 0 to 35%, with the left scale reversed. Vegetation rows share an explicit common order, descending by all-native share. Central labels identify each paired row; tooltips retain the official full name and both percentages.
+Each complete 25-type distribution sums to 100%; the ten displayed types are not a complete distribution. The two denominators are deliberately different. This comparison describes composition, whereas Chart 10 describes coverage within each vegetation type. Both horizontal magnitude scales run from 0 to 40%, with the left scale reversed. Vegetation rows share an explicit common order, descending by all-native share. Central labels identify each paired row; tooltips retain the official full name and both percentages.
 
 The default discovery shows Tussock Grasslands: about 7.6% of all classified native vegetation but 2.2% within public protection, a difference of about −5.4 percentage points. Selecting a row changes the discovery to that type. Hummock Grasslands, for example, has a difference of about +9.9 percentage points. Click either bar or its central label to highlight the row; click again to clear. This interaction does not filter or recompute denominators. No dropdown is provided for this non-map chart.
 
@@ -23,9 +23,9 @@ Inputs: `data/chart12_national_protection.json` and `data/chart12_waffle_cells.j
 - Protected share: 22.565941158185673%, displayed as 22.57%.
 - Complement: 77.43405884181433%, displayed as 77.43%.
 
-The 10 × 10 grid has 100 equal cells, each representing one percentage point. Twenty-two cells are fully teal; 56.5941158% of the next cell is teal. Each cell has the same gap, and the partially filled cell splits its usable width proportionally. Summing protected fractions therefore reproduces the original percentage rather than rounding it to 23 cells. Teal and grey segments occupy distinct areas, including in the partial cell.
+The 10 × 10 grid has 100 equal cells, each representing one percentage point. Twenty-two cells are fully green; 56.5941158% of the next cell is green. Each cell has the same gap, and the partially filled cell splits its usable width proportionally. Summing protected fractions therefore reproduces the original percentage rather than rounding it to 23 cells. Green and grey segments occupy distinct areas, including in the partial cell.
 
-Read across each row from the top left. Cell positions are abstract and have no geographic meaning. Hover exposes cell number, category and protected fraction. Clicking a teal or grey segment highlights that category and updates the nearby explanation; clicking it again clears the focus. Selection does not change the national value.
+Read across each row from the top left. Cell positions are abstract and have no geographic meaning. Hover exposes cell number, category and protected fraction. Clicking a green or grey segment highlights that category and updates the nearby explanation; clicking it again clears the focus. Selection does not change the national value.
 
 The national official total includes reported protection for which public geometry may be unavailable. It is not the public NVIS overlay total and must not be used as the denominator of Chart 11. The complement is labelled not protected in the CAPAD national total; this describes database coverage rather than a broader claim that no conservation occurs there.
 
@@ -47,6 +47,10 @@ The bird grid in Part 2 now uses the full card width, with its reading guide bel
 
 This method document records calculations and implementation. The author will provide the final AI-use disclosure separately.
 
-## Colour and final-card layout
+## Butterfly spacing refinement
 
-Protection-related marks in Charts 10–12 use the same deep teal (#246875), distinct from the forest-family green in Part 1. The left side of Chart 11 retains its olive all-native comparison colour. Chart 12 places statistics and the reading guide on the left, with a 380 px waffle on the right; small screens stack them in that order. Its concise footnote retains the official snapshot and unpublished-boundary scope, while the fuller explanation remains in Sources & Methods.
+Both magnitude axes explicitly show 0, 10, 20, 30 and 40%. Zero remains nearest the central labels. The central column is narrowed to 210 px on desktop, and concatenation uses flush bounds with 4 px spacing so bars sit closer to their row labels. The earlier protection colours and final-waffle layout are retained.
+
+## Final-card reading hierarchy
+
+Chart 12 uses three desktop columns: a primary 22.57% number and secondary 77.43% number on the left, a 340 px waffle in the middle, and a separate legend and partial-cell explanation on the right. The large number uses the existing Georgia heading family; explanatory text remains Arial. No annotation overlays cells. The guide moves below at narrower widths and the figure stacks on small screens. The official snapshot and unpublished-boundary scope remain in a concise footnote.

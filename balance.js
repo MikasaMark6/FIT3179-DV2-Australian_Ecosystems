@@ -12,7 +12,7 @@
   function selectCoverage(category){
     waffleFocus=category||'';
     if(views['national-waffle'])views['national-waffle'].signal('waffleFocus',waffleFocus).runAsync();
-    el('waffle-detail').textContent=waffleFocus?`${waffleFocus}: ${(waffleFocus==='Protected'?national.protected_pct:national.not_protected_pct).toFixed(2)}% of national land in the official CAPAD 2024 snapshot. Click this category again to clear.`:'Each square represents one percentage point of national land. Hover for cell details; click green or grey to highlight its category.';
+    el('waffle-detail').textContent=waffleFocus?`${waffleFocus}: ${(waffleFocus==='Protected'?national.protected_pct:national.not_protected_pct).toFixed(2)}% of national land in the official CAPAD 2024 snapshot. Click this category again to clear.`:'Hover for details. Click a colour to highlight its category; click again to clear.';
   }
   async function drawCharts(){
     const s=JSON.parse(JSON.stringify(specs[0]));s.data={values:representation};s.params[0].value=focus;
@@ -37,7 +37,7 @@
       const load=async u=>{const r=await fetch(u,u.startsWith('specs/')?{cache:'no-cache'}:{});if(!r.ok)throw Error(u+': HTTP '+r.status);return r.json();};
       let totals;[representation,totals,cells,...specs]=await Promise.all(['data/chart11_representation.json','data/chart12_national_protection.json','data/chart12_waffle_cells.json','specs/chart11_representation_butterfly.vl.json','specs/chart12_national_waffle.vl.json'].map(load));national=totals[0];
       el('national-protected-value').textContent=national.protected_pct.toFixed(2)+'%';el('national-remainder-value').textContent=national.not_protected_pct.toFixed(2)+'%';
-      el('national-insight').textContent=`${national.protected_pct.toFixed(2)}% of national land was protected on 30 June 2024 — about ${(national.protected_area_ha/100).toLocaleString('en-AU',{maximumFractionDigits:0})} km².`;
+      el('national-insight').textContent=`${(national.protected_area_ha/100).toLocaleString('en-AU',{maximumFractionDigits:0})} km² protected`;
       await draw();let timer,previous=window.innerWidth;window.addEventListener('resize',()=>{if(previous===window.innerWidth)return;previous=window.innerWidth;clearTimeout(timer);timer=setTimeout(draw,250);});
     }catch(e){console.error(e);el('balance-status').textContent='Final comparison data could not load. '+e.message;}
   }
