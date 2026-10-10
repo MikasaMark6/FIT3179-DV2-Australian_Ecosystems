@@ -23,9 +23,9 @@ Inputs: `data/chart12_national_protection.json` and `data/chart12_waffle_cells.j
 - Protected share: 22.565941158185673%, displayed as 22.57%.
 - Complement: 77.43405884181433%, displayed as 77.43%.
 
-The 10 × 10 grid has 100 equal cells, each representing one percentage point. Twenty-two cells are fully green; 56.5941158% of the next cell is green. Each cell has the same gap, and the partially filled cell splits its usable width proportionally. Summing protected fractions therefore reproduces the original percentage rather than rounding it to 23 cells. Green and grey segments occupy distinct areas, including in the partial cell.
+The 10 × 10 grid has 100 equal cells, each representing one percentage point. Twenty-two cells are fully teal; 56.5941158% of the next cell is teal. Each cell has the same gap, and the partially filled cell splits its usable width proportionally. Summing protected fractions therefore reproduces the original percentage rather than rounding it to 23 cells. Teal and grey segments occupy distinct areas, including in the partial cell.
 
-Read across each row from the top left. Cell positions are abstract and have no geographic meaning. Hover exposes cell number, category and protected fraction. Clicking a green or grey segment highlights that category and updates the nearby explanation; clicking it again clears the focus. Selection does not change the national value.
+Read across each row from the top left. Cell positions are abstract and have no geographic meaning. Hover exposes cell number, category and protected fraction. Clicking a teal or grey segment highlights that category and updates the nearby explanation; clicking it again clears the focus. Selection does not change the national value.
 
 The national official total includes reported protection for which public geometry may be unavailable. It is not the public NVIS overlay total and must not be used as the denominator of Chart 11. The complement is labelled not protected in the CAPAD national total; this describes database coverage rather than a broader claim that no conservation occurs there.
 
@@ -46,3 +46,7 @@ The bird grid in Part 2 now uses the full card width, with its reading guide bel
 - DCCEEW CAPAD 2024: https://www.dcceew.gov.au/environment/land/nrs/science/capad/2024
 
 This method document records calculations and implementation. The author will provide the final AI-use disclosure separately.
+
+## Colour and final-card layout
+
+Protection-related marks in Charts 10–12 use the same deep teal (#246875), distinct from the forest-family green in Part 1. The left side of Chart 11 retains its olive all-native comparison colour. Chart 12 places statistics and the reading guide on the left, with a 380 px waffle on the right; small screens stack them in that order. Its concise footnote retains the official snapshot and unpublished-boundary scope, while the fuller explanation remains in Sources & Methods.
