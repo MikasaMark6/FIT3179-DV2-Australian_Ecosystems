@@ -149,3 +149,13 @@ footer{padding:22px 0 30px}
 .period-key{margin:5px 0 9px}
 .bird-controls{padding:10px 12px;gap:10px}
 @media(max-width:520px){.chart-card{padding:12px}.map-layout{gap:10px}}
+
+/* Full-width bird map and compact concluding comparisons. */
+.chart-reading{font-size:13px;color:var(--muted);margin:8px 0;line-height:1.5}
+#bird-map svg,#representation-chart svg,#national-waffle svg{display:block;max-width:100%;height:auto}
+#balance-status{font-size:13px;color:var(--muted);margin:8px 0}
+.waffle-layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:24px;align-items:center}
+.waffle-layout aside{font-size:14px;max-width:480px}
+.national-stat{display:grid;grid-template-columns:18px auto 1fr;gap:10px;align-items:center;margin:12px 0}
+.national-stat strong{font:400 30px Georgia,serif;color:var(--ink)}
+@media(max-width:700px){.waffle-layout{grid-template-columns:1fr;gap:10px}.waffle-layout aside{max-width:none}}

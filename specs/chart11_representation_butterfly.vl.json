@@ -1,0 +1,259 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Butterfly comparison of vegetation composition: full 25-type extant classified-native denominator on the left and publicly mapped protected classified-native denominator on the right. Ten representative types are shown. Both magnitude scales are 0\u201335%.",
+  "background": null,
+  "data": {
+    "url": "../data/chart11_representation.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.default_comparison"
+    },
+    {
+      "calculate": "datum.mvg_code == 1 ? \"Rainforests / vine thickets\" : datum.mvg_code == 9 ? \"Melaleuca forests / woodlands\" : datum.mvg_code == 14 ? \"Mallee woodlands / shrubs\" : datum.mvg_name",
+      "as": "short_name"
+    }
+  ],
+  "params": [
+    {
+      "name": "representationFocus",
+      "value": 0
+    }
+  ],
+  "spacing": 8,
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6e8df",
+      "domain": false
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 13,
+      "color": "#344b3f"
+    }
+  },
+  "resolve": {
+    "scale": {
+      "y": "shared",
+      "x": "independent"
+    }
+  },
+  "hconcat": [
+    {
+      "width": 280,
+      "height": 300,
+      "title": "All native vegetation",
+      "mark": {
+        "type": "bar",
+        "color": "#85956d",
+        "height": 20,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "sort": {
+            "field": "share_of_classified_native_pct",
+            "order": "descending",
+            "op": "max"
+          },
+          "axis": null
+        },
+        "x": {
+          "field": "share_of_classified_native_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              35
+            ],
+            "reverse": true,
+            "nice": false
+          },
+          "axis": {
+            "title": "Share (%)",
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": "representationFocus == 0 || datum.mvg_code == representationFocus",
+            "value": 1
+          },
+          "value": 0.22
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Vegetation type",
+            "type": "nominal"
+          },
+          {
+            "field": "share_of_classified_native_pct",
+            "title": "Share of all classified native vegetation (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "share_of_mapped_protected_classified_native_pct",
+            "title": "Share within public protection (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "representation_difference_pp",
+            "title": "Protected minus all-native share (pp)",
+            "type": "quantitative",
+            "format": "+.2f"
+          }
+        ]
+      }
+    },
+    {
+      "width": 240,
+      "height": 300,
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "fontSize": 13,
+        "color": "#344b3f",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "sort": {
+            "field": "share_of_classified_native_pct",
+            "order": "descending",
+            "op": "max"
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "short_name"
+        },
+        "opacity": {
+          "condition": {
+            "test": "representationFocus == 0 || datum.mvg_code == representationFocus",
+            "value": 1
+          },
+          "value": 0.22
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Vegetation type",
+            "type": "nominal"
+          },
+          {
+            "field": "share_of_classified_native_pct",
+            "title": "Share of all classified native vegetation (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "share_of_mapped_protected_classified_native_pct",
+            "title": "Share within public protection (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "representation_difference_pp",
+            "title": "Protected minus all-native share (pp)",
+            "type": "quantitative",
+            "format": "+.2f"
+          }
+        ]
+      }
+    },
+    {
+      "width": 280,
+      "height": 300,
+      "title": "Within public protection",
+      "mark": {
+        "type": "bar",
+        "color": "#315d49",
+        "height": 20,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "y": {
+          "field": "short_name",
+          "type": "nominal",
+          "sort": {
+            "field": "share_of_classified_native_pct",
+            "order": "descending",
+            "op": "max"
+          },
+          "axis": null
+        },
+        "x": {
+          "field": "share_of_mapped_protected_classified_native_pct",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              35
+            ],
+            "reverse": false,
+            "nice": false
+          },
+          "axis": {
+            "title": "Share (%)",
+            "values": [
+              0,
+              10,
+              20,
+              30
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "test": "representationFocus == 0 || datum.mvg_code == representationFocus",
+            "value": 1
+          },
+          "value": 0.22
+        },
+        "tooltip": [
+          {
+            "field": "mvg_name",
+            "title": "Vegetation type",
+            "type": "nominal"
+          },
+          {
+            "field": "share_of_classified_native_pct",
+            "title": "Share of all classified native vegetation (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "share_of_mapped_protected_classified_native_pct",
+            "title": "Share within public protection (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "representation_difference_pp",
+            "title": "Protected minus all-native share (pp)",
+            "type": "quantitative",
+            "format": "+.2f"
+          }
+        ]
+      }
+    }
+  ]
+}

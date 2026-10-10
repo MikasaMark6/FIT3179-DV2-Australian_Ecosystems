@@ -1,0 +1,183 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "100 cells represent national land share in official CAPAD 2024 statistics. Green area includes 22 full cells and 56.5941% of the 23rd cell. Cell locations have no geographic meaning.",
+  "background": null,
+  "width": 340,
+  "height": 340,
+  "padding": 0,
+  "autosize": "none",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 13,
+      "gridColor": "#e6e8df",
+      "domain": false
+    },
+    "title": {
+      "font": "Arial",
+      "fontSize": 13,
+      "color": "#344b3f"
+    }
+  },
+  "data": {
+    "url": "../data/chart12_waffle_cells.json"
+  },
+  "params": [
+    {
+      "name": "waffleFocus",
+      "value": ""
+    }
+  ],
+  "transform": [
+    {
+      "calculate": "datum.column + 0.06",
+      "as": "x_start"
+    },
+    {
+      "calculate": "datum.column + 0.94",
+      "as": "x_end"
+    },
+    {
+      "calculate": "datum.row + 0.06",
+      "as": "y_start"
+    },
+    {
+      "calculate": "datum.row + 0.94",
+      "as": "y_end"
+    },
+    {
+      "calculate": "datum.column + 0.06 + 0.88 * datum.protected_fraction",
+      "as": "x_protected_end"
+    },
+    {
+      "calculate": "datum.cell + 1",
+      "as": "cell_number"
+    },
+    {
+      "calculate": "datum.column + 0.06 + 0.88 * datum.protected_fraction",
+      "as": "x_remainder_start"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "x_start",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10
+        ],
+        "nice": false
+      },
+      "axis": null
+    },
+    "y": {
+      "field": "y_start",
+      "type": "quantitative",
+      "scale": {
+        "domain": [
+          0,
+          10
+        ],
+        "reverse": true,
+        "nice": false
+      },
+      "axis": null
+    },
+    "y2": {
+      "field": "y_end"
+    },
+    "tooltip": [
+      {
+        "field": "coverage",
+        "type": "nominal",
+        "title": "National coverage category"
+      },
+      {
+        "field": "cell_number",
+        "type": "quantitative",
+        "title": "Cell (one percentage point)"
+      },
+      {
+        "field": "protected_fraction",
+        "type": "quantitative",
+        "title": "Protected fraction of this cell",
+        "format": ".1%"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "transform": [
+        {
+          "filter": "datum.protected_fraction < 1"
+        },
+        {
+          "calculate": "\"Not protected\"",
+          "as": "coverage"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "color": "#dfe3d7",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x2": {
+          "field": "x_end"
+        },
+        "opacity": {
+          "condition": {
+            "test": "waffleFocus == \"\" || waffleFocus == \"Not protected\"",
+            "value": 1
+          },
+          "value": 0.28
+        },
+        "x": {
+          "field": "x_remainder_start",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              10
+            ],
+            "nice": false
+          },
+          "axis": null
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.protected_fraction > 0"
+        },
+        {
+          "calculate": "\"Protected\"",
+          "as": "coverage"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "color": "#315d49",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x2": {
+          "field": "x_protected_end"
+        },
+        "opacity": {
+          "condition": {
+            "test": "waffleFocus == \"\" || waffleFocus == \"Protected\"",
+            "value": 1
+          },
+          "value": 0.28
+        }
+      }
+    }
+  ]
+}
