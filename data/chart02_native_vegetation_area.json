@@ -1,0 +1,227 @@
+[
+  {
+    "mvg_code": 1,
+    "mvg_name": "Rainforests and Vine Thickets",
+    "display_family": "Forests and vine thickets",
+    "default_comparison": true,
+    "extent_ha": 3739713,
+    "extent_km2": 37397.13,
+    "share_of_classified_native_pct": 0.5782016148394322
+  },
+  {
+    "mvg_code": 2,
+    "mvg_name": "Eucalypt Tall Open Forests",
+    "display_family": "Forests and vine thickets",
+    "default_comparison": false,
+    "extent_ha": 7664024,
+    "extent_km2": 76640.24,
+    "share_of_classified_native_pct": 1.184944152925148
+  },
+  {
+    "mvg_code": 3,
+    "mvg_name": "Eucalypt Open Forests",
+    "display_family": "Forests and vine thickets",
+    "default_comparison": true,
+    "extent_ha": 20897470,
+    "extent_km2": 208974.7,
+    "share_of_classified_native_pct": 3.2309834738811745
+  },
+  {
+    "mvg_code": 4,
+    "mvg_name": "Eucalypt Low Open Forests",
+    "display_family": "Forests and vine thickets",
+    "default_comparison": false,
+    "extent_ha": 2112693,
+    "extent_km2": 21126.93,
+    "share_of_classified_native_pct": 0.3266460565984514
+  },
+  {
+    "mvg_code": 5,
+    "mvg_name": "Eucalypt Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": true,
+    "extent_ha": 89341449,
+    "extent_km2": 893414.49,
+    "share_of_classified_native_pct": 13.813191034684953
+  },
+  {
+    "mvg_code": 6,
+    "mvg_name": "Acacia Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 41094444,
+    "extent_km2": 410944.44,
+    "share_of_classified_native_pct": 6.353662401828326
+  },
+  {
+    "mvg_code": 7,
+    "mvg_name": "Callitris Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 1869266,
+    "extent_km2": 18692.66,
+    "share_of_classified_native_pct": 0.28900950949028603
+  },
+  {
+    "mvg_code": 8,
+    "mvg_name": "Casuarina Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 3288341,
+    "extent_km2": 32883.41,
+    "share_of_classified_native_pct": 0.5084144361726991
+  },
+  {
+    "mvg_code": 9,
+    "mvg_name": "Melaleuca Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": true,
+    "extent_ha": 9562796,
+    "extent_km2": 95627.96,
+    "share_of_classified_native_pct": 1.478515621273628
+  },
+  {
+    "mvg_code": 10,
+    "mvg_name": "Other Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 5358893,
+    "extent_km2": 53588.93,
+    "share_of_classified_native_pct": 0.828545021062239
+  },
+  {
+    "mvg_code": 11,
+    "mvg_name": "Eucalypt Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 34802213,
+    "extent_km2": 348022.13,
+    "share_of_classified_native_pct": 5.38081284755966
+  },
+  {
+    "mvg_code": 12,
+    "mvg_name": "Tropical Eucalypt Woodlands/Grasslands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "default_comparison": false,
+    "extent_ha": 15207009,
+    "extent_km2": 152070.09,
+    "share_of_classified_native_pct": 2.351174317568695
+  },
+  {
+    "mvg_code": 13,
+    "mvg_name": "Acacia Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 31180996,
+    "extent_km2": 311809.96,
+    "share_of_classified_native_pct": 4.820932044652056
+  },
+  {
+    "mvg_code": 14,
+    "mvg_name": "Mallee Woodlands and Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "default_comparison": true,
+    "extent_ha": 20598808,
+    "extent_km2": 205988.08,
+    "share_of_classified_native_pct": 3.1848069756602753
+  },
+  {
+    "mvg_code": 15,
+    "mvg_name": "Low Closed Forests and Tall Closed Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "default_comparison": false,
+    "extent_ha": 1875203,
+    "extent_km2": 18752.03,
+    "share_of_classified_native_pct": 0.2899274363438445
+  },
+  {
+    "mvg_code": 16,
+    "mvg_name": "Acacia Shrublands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "default_comparison": true,
+    "extent_ha": 79458061,
+    "extent_km2": 794580.61,
+    "share_of_classified_native_pct": 12.28510829098653
+  },
+  {
+    "mvg_code": 17,
+    "mvg_name": "Other Shrublands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "default_comparison": false,
+    "extent_ha": 11192118,
+    "extent_km2": 111921.18,
+    "share_of_classified_native_pct": 1.7304270945587203
+  },
+  {
+    "mvg_code": 18,
+    "mvg_name": "Heathlands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "default_comparison": true,
+    "extent_ha": 3708680,
+    "extent_km2": 37086.8,
+    "share_of_classified_native_pct": 0.5734035646379028
+  },
+  {
+    "mvg_code": 19,
+    "mvg_name": "Tussock Grasslands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "default_comparison": true,
+    "extent_ha": 49127301,
+    "extent_km2": 491273.01,
+    "share_of_classified_native_pct": 7.595632277370711
+  },
+  {
+    "mvg_code": 20,
+    "mvg_name": "Hummock Grasslands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "default_comparison": true,
+    "extent_ha": 141027639,
+    "extent_km2": 1410276.39,
+    "share_of_classified_native_pct": 21.80445627961089
+  },
+  {
+    "mvg_code": 21,
+    "mvg_name": "Other Grasslands, Herblands, Sedgelands and Rushlands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "default_comparison": false,
+    "extent_ha": 10806652,
+    "extent_km2": 108066.52,
+    "share_of_classified_native_pct": 1.6708297234059886
+  },
+  {
+    "mvg_code": 22,
+    "mvg_name": "Chenopod Shrublands, Samphire Shrublands and Forblands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "default_comparison": false,
+    "extent_ha": 47289934,
+    "extent_km2": 472899.34,
+    "share_of_classified_native_pct": 7.311554711404369
+  },
+  {
+    "mvg_code": 23,
+    "mvg_name": "Mangroves",
+    "display_family": "Mangroves",
+    "default_comparison": true,
+    "extent_ha": 1107726,
+    "extent_km2": 11077.26,
+    "share_of_classified_native_pct": 0.17126687582700192
+  },
+  {
+    "mvg_code": 31,
+    "mvg_name": "Other Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "default_comparison": false,
+    "extent_ha": 13369111,
+    "extent_km2": 133691.11,
+    "share_of_classified_native_pct": 2.0670146530409195
+  },
+  {
+    "mvg_code": 32,
+    "mvg_name": "Mallee Open Woodlands and Sparse Mallee Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "default_comparison": false,
+    "extent_ha": 1103022,
+    "extent_km2": 11030.22,
+    "share_of_classified_native_pct": 0.17053958461609758
+  }
+]

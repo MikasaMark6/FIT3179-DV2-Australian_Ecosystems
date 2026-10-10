@@ -1,0 +1,602 @@
+[
+  {
+    "cell": 0,
+    "row": 0,
+    "column": 0,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 1,
+    "row": 0,
+    "column": 1,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 2,
+    "row": 0,
+    "column": 2,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 3,
+    "row": 0,
+    "column": 3,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 4,
+    "row": 0,
+    "column": 4,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 5,
+    "row": 0,
+    "column": 5,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 6,
+    "row": 0,
+    "column": 6,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 7,
+    "row": 0,
+    "column": 7,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 8,
+    "row": 0,
+    "column": 8,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 9,
+    "row": 0,
+    "column": 9,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 10,
+    "row": 1,
+    "column": 0,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 11,
+    "row": 1,
+    "column": 1,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 12,
+    "row": 1,
+    "column": 2,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 13,
+    "row": 1,
+    "column": 3,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 14,
+    "row": 1,
+    "column": 4,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 15,
+    "row": 1,
+    "column": 5,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 16,
+    "row": 1,
+    "column": 6,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 17,
+    "row": 1,
+    "column": 7,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 18,
+    "row": 1,
+    "column": 8,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 19,
+    "row": 1,
+    "column": 9,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 20,
+    "row": 2,
+    "column": 0,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 21,
+    "row": 2,
+    "column": 1,
+    "protected_fraction": 1
+  },
+  {
+    "cell": 22,
+    "row": 2,
+    "column": 2,
+    "protected_fraction": 0.565941158185673
+  },
+  {
+    "cell": 23,
+    "row": 2,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 24,
+    "row": 2,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 25,
+    "row": 2,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 26,
+    "row": 2,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 27,
+    "row": 2,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 28,
+    "row": 2,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 29,
+    "row": 2,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 30,
+    "row": 3,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 31,
+    "row": 3,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 32,
+    "row": 3,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 33,
+    "row": 3,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 34,
+    "row": 3,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 35,
+    "row": 3,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 36,
+    "row": 3,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 37,
+    "row": 3,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 38,
+    "row": 3,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 39,
+    "row": 3,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 40,
+    "row": 4,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 41,
+    "row": 4,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 42,
+    "row": 4,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 43,
+    "row": 4,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 44,
+    "row": 4,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 45,
+    "row": 4,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 46,
+    "row": 4,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 47,
+    "row": 4,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 48,
+    "row": 4,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 49,
+    "row": 4,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 50,
+    "row": 5,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 51,
+    "row": 5,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 52,
+    "row": 5,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 53,
+    "row": 5,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 54,
+    "row": 5,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 55,
+    "row": 5,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 56,
+    "row": 5,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 57,
+    "row": 5,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 58,
+    "row": 5,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 59,
+    "row": 5,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 60,
+    "row": 6,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 61,
+    "row": 6,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 62,
+    "row": 6,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 63,
+    "row": 6,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 64,
+    "row": 6,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 65,
+    "row": 6,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 66,
+    "row": 6,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 67,
+    "row": 6,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 68,
+    "row": 6,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 69,
+    "row": 6,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 70,
+    "row": 7,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 71,
+    "row": 7,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 72,
+    "row": 7,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 73,
+    "row": 7,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 74,
+    "row": 7,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 75,
+    "row": 7,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 76,
+    "row": 7,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 77,
+    "row": 7,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 78,
+    "row": 7,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 79,
+    "row": 7,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 80,
+    "row": 8,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 81,
+    "row": 8,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 82,
+    "row": 8,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 83,
+    "row": 8,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 84,
+    "row": 8,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 85,
+    "row": 8,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 86,
+    "row": 8,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 87,
+    "row": 8,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 88,
+    "row": 8,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 89,
+    "row": 8,
+    "column": 9,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 90,
+    "row": 9,
+    "column": 0,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 91,
+    "row": 9,
+    "column": 1,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 92,
+    "row": 9,
+    "column": 2,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 93,
+    "row": 9,
+    "column": 3,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 94,
+    "row": 9,
+    "column": 4,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 95,
+    "row": 9,
+    "column": 5,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 96,
+    "row": 9,
+    "column": 6,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 97,
+    "row": 9,
+    "column": 7,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 98,
+    "row": 9,
+    "column": 8,
+    "protected_fraction": 0
+  },
+  {
+    "cell": 99,
+    "row": 9,
+    "column": 9,
+    "protected_fraction": 0
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "chart01_nvis_display_grid.json": {
+    "bytes": 1139956,
+    "sha256": "a7a0f5e87a977614b70c033620ba47f84b4d0ad7f81cc97f143698ce8e97c9b0"
+  },
+  "chart02_native_vegetation_area.json": {
+    "bytes": 6936,
+    "sha256": "abedeef3869f9f808109e896fb30760d39c63bb806d318ab35637919e5f8a618"
+  },
+  "chart03_state_native_composition.json": {
+    "bytes": 73156,
+    "sha256": "cf37177fd4419b70cbd3e8296f40769ebd8726634c21bac4157ec9eee28678d8"
+  },
+  "chart04_bird_grid_50km.geojson": {
+    "bytes": 1521752,
+    "sha256": "be784b01212ac562e5eb1983571a0e71dfa4a50e738019f02b0d7a474c7e7390"
+  },
+  "chart04_bird_grid_summary.json": {
+    "bytes": 459606,
+    "sha256": "f78833264374e4b0b653d306221972bedd6663afed73dff358571f578a5e91e4"
+  },
+  "chart05_ramsar_sites.json": {
+    "bytes": 16199,
+    "sha256": "a895988f460fa813a8dd966ff108fdb57ed882f10d1e4646b720f084d2313b65"
+  },
+  "chart06_pre1750_vs_extant.json": {
+    "bytes": 8682,
+    "sha256": "c5fb62d94142352257b6b93281b90fe8f3473b1c177271489a20a75b32129b12"
+  },
+  "chart07_same_category_remaining.json": {
+    "bytes": 7415,
+    "sha256": "f846085a8561e93e58836031c5fea93529fd81c43a6b529dfcc7d4d01f438fcc"
+  },
+  "chart08_09_ibra_protection.json": {
+    "bytes": 34235,
+    "sha256": "5a19ee113e8386389def5453a4729042ca1f7f3711f8bb561e02e8e5fc20aeaa"
+  },
+  "chart10_public_protection.json": {
+    "bytes": 8411,
+    "sha256": "3e0c8faf5b6057416dbd7cf57ea3fa8817f378b92aadd08a74ad41324794a394"
+  },
+  "chart11_representation.json": {
+    "bytes": 8844,
+    "sha256": "e030407ac50da68f49515caf3abcaf07455594b0037bb2ecc6e6703744838e3e"
+  },
+  "chart12_national_protection.json": {
+    "bytes": 209,
+    "sha256": "5965b82f90c165eeda594743fcaffc4f1d4ed1a58c0fe2d4d5ca2c7cb449b207"
+  },
+  "chart12_waffle_cells.json": {
+    "bytes": 8408,
+    "sha256": "151c08e3ba702f23c45a00104a208812dfdef71064ca7b95fdc347ab6f4199cf"
+  },
+  "ibra71_regions.topojson": {
+    "bytes": 3164275,
+    "sha256": "63334c83d883ff6813824e2e91d06e9194bf0274dea04d7cd19d72b80744a6de"
+  },
+  "vegetation_all_classes_audit.json": {
+    "bytes": 8078,
+    "sha256": "b9a6f6e2f5a4d212f91d4c162d4d5019614670cf20ae575daba61f99eeaab048"
+  },
+  "vegetation_classes.json": {
+    "bytes": 6230,
+    "sha256": "44fc30f4bd3de1422a091c87e2f053e6a2bbb6b6099823a1b4c826d879030ffe"
+  }
+}

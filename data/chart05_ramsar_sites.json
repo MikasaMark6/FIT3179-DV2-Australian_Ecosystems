@@ -1,0 +1,605 @@
+[
+  {
+    "site_code": 1,
+    "site_name": "Cobourg Peninsula",
+    "state": "NT",
+    "designation_dates": "1974-05-08",
+    "source_boundary_records": 1,
+    "longitude": 132.39222307661225,
+    "latitude": -11.354352484354497
+  },
+  {
+    "site_code": 204,
+    "site_name": "Kakadu National Park",
+    "state": "NT",
+    "designation_dates": "1980-06-12",
+    "source_boundary_records": 1,
+    "longitude": 132.536254370396,
+    "latitude": -13.05057618495512
+  },
+  {
+    "site_code": 251,
+    "site_name": "Moulting Lagoon",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 148.16457427148856,
+    "latitude": -42.04799851131896
+  },
+  {
+    "site_code": 252,
+    "site_name": "Logan Lagoon",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 148.30723540760653,
+    "latitude": -40.185035528740045
+  },
+  {
+    "site_code": 253,
+    "site_name": "Lavinia",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 144.090592124924,
+    "latitude": -39.731308349060726
+  },
+  {
+    "site_code": 254,
+    "site_name": "Pitt Water-Orielton Lagoon",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 147.45381825902518,
+    "latitude": -42.79050501343106
+  },
+  {
+    "site_code": 255,
+    "site_name": "Apsley Marshes",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 148.20732778483585,
+    "latitude": -41.97984481478986
+  },
+  {
+    "site_code": 256,
+    "site_name": "East Coast Cape Barren Island Lagoons",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 148.39042380888344,
+    "latitude": -40.372475897583286
+  },
+  {
+    "site_code": 257,
+    "site_name": "Flood Plain Lower Ringarooma River",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 147.94073747676026,
+    "latitude": -40.88926217082807
+  },
+  {
+    "site_code": 258,
+    "site_name": "Jocks Lagoon",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 148.30823989839877,
+    "latitude": -41.34567191500624
+  },
+  {
+    "site_code": 259,
+    "site_name": "Interlaken (Lake Crescent)",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 147.15883788105717,
+    "latitude": -42.14636156697396
+  },
+  {
+    "site_code": 260,
+    "site_name": "Little Waterhouse Lake",
+    "state": "TAS",
+    "designation_dates": "1982-11-16",
+    "source_boundary_records": 1,
+    "longitude": 147.61315423868703,
+    "latitude": -40.874122439605515
+  },
+  {
+    "site_code": 261,
+    "site_name": "Corner Inlet",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 146.44899145687904,
+    "latitude": -38.763833920856364
+  },
+  {
+    "site_code": 262,
+    "site_name": "Barmah Forest",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 145.05826925221447,
+    "latitude": -35.91773301897512
+  },
+  {
+    "site_code": 263,
+    "site_name": "Gunbower Forest",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 144.31945499086603,
+    "latitude": -35.814471155813415
+  },
+  {
+    "site_code": 264,
+    "site_name": "Hattah-Kulkyne Lakes",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 12,
+    "longitude": 142.36838690104884,
+    "latitude": -34.71874518049719
+  },
+  {
+    "site_code": 265,
+    "site_name": "Kerang Wetlands",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 14,
+    "longitude": 143.74209580530453,
+    "latitude": -35.65164079306921
+  },
+  {
+    "site_code": 266,
+    "site_name": "Port Phillip Bay (Western Shoreline) and Bellarine Peninsula",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 6,
+    "longitude": 144.60204768189917,
+    "latitude": -37.98704827755254
+  },
+  {
+    "site_code": 267,
+    "site_name": "Western Port",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 145.24929540311072,
+    "latitude": -38.371397144501046
+  },
+  {
+    "site_code": 268,
+    "site_name": "Western District Lakes",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 143.38025172389345,
+    "latitude": -38.20052857367917
+  },
+  {
+    "site_code": 269,
+    "site_name": "Gippsland Lakes",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 147.6048796225599,
+    "latitude": -37.99606188890742
+  },
+  {
+    "site_code": 270,
+    "site_name": "Lake Albacutya",
+    "state": "VIC",
+    "designation_dates": "1982-12-15",
+    "source_boundary_records": 1,
+    "longitude": 141.96953305101192,
+    "latitude": -35.75023173194434
+  },
+  {
+    "site_code": 286,
+    "site_name": "Towra Point Nature Reserve",
+    "state": "NSW",
+    "designation_dates": "1984-02-21",
+    "source_boundary_records": 1,
+    "longitude": 151.16153763547973,
+    "latitude": -34.01476651236942
+  },
+  {
+    "site_code": 287,
+    "site_name": "Hunter Estuary Wetlands",
+    "state": "NSW",
+    "designation_dates": "1984-02-21; 2002-10-21",
+    "source_boundary_records": 2,
+    "longitude": 151.7652508343791,
+    "latitude": -32.85088151316926
+  },
+  {
+    "site_code": 321,
+    "site_name": "The Coorong, and Lakes Alexandrina and Albert Wetland",
+    "state": "SA",
+    "designation_dates": "1985-11-01",
+    "source_boundary_records": 1,
+    "longitude": 139.4268148699855,
+    "latitude": -35.92528106912132
+  },
+  {
+    "site_code": 322,
+    "site_name": "Bool and Hacks Lagoons",
+    "state": "SA",
+    "designation_dates": "1985-11-01",
+    "source_boundary_records": 1,
+    "longitude": 140.68963457831543,
+    "latitude": -37.120364110788046
+  },
+  {
+    "site_code": 337,
+    "site_name": "The Macquarie Marshes",
+    "state": "NSW",
+    "designation_dates": "1986-08-01",
+    "source_boundary_records": 2,
+    "longitude": 147.53321564388565,
+    "latitude": -30.697092985850137
+  },
+  {
+    "site_code": 376,
+    "site_name": "Coongie Lakes",
+    "state": "SA",
+    "designation_dates": "1987-06-15",
+    "source_boundary_records": 1,
+    "longitude": 140.07458246435817,
+    "latitude": -27.020612190493864
+  },
+  {
+    "site_code": 377,
+    "site_name": "Riverland",
+    "state": "SA",
+    "designation_dates": "1987-09-23",
+    "source_boundary_records": 1,
+    "longitude": 140.78540407422537,
+    "latitude": -34.03292773896429
+  },
+  {
+    "site_code": 477,
+    "site_name": "Ord River Floodplain",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 128.26469800761444,
+    "latitude": -15.222299699906761
+  },
+  {
+    "site_code": 478,
+    "site_name": "Lakes Argyle and Kununurra",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 128.77684558296693,
+    "latitude": -16.266580358486802
+  },
+  {
+    "site_code": 479,
+    "site_name": "Roebuck Bay",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 122.25715608968979,
+    "latitude": -18.142810737365988
+  },
+  {
+    "site_code": 480,
+    "site_name": "Eighty-mile Beach",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 121.48300536874737,
+    "latitude": -19.80799900764531
+  },
+  {
+    "site_code": 481,
+    "site_name": "Forrestdale and Thomsons Lakes",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 115.82982782092381,
+    "latitude": -32.15018002960053
+  },
+  {
+    "site_code": 482,
+    "site_name": "Peel-Yalgorup System",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 115.67136132467274,
+    "latitude": -32.66571896484882
+  },
+  {
+    "site_code": 483,
+    "site_name": "Toolibin Lake (also known as Lake Toolibin)",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 117.60917635121055,
+    "latitude": -32.917047840467866
+  },
+  {
+    "site_code": 484,
+    "site_name": "Vasse-Wonnerup System",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 115.42285525425712,
+    "latitude": -33.63679309272479
+  },
+  {
+    "site_code": 485,
+    "site_name": "Lake Warden System",
+    "state": "WA",
+    "designation_dates": "1990-06-07",
+    "source_boundary_records": 1,
+    "longitude": 121.87014563327922,
+    "latitude": -33.818782386623596
+  },
+  {
+    "site_code": 512,
+    "site_name": "Hosnies Spring",
+    "state": "EXT",
+    "designation_dates": "1990-12-11",
+    "source_boundary_records": 1,
+    "longitude": 105.69271270261027,
+    "latitude": -10.473577695172947
+  },
+  {
+    "site_code": 631,
+    "site_name": "Moreton Bay",
+    "state": "QLD",
+    "designation_dates": "1993-10-22",
+    "source_boundary_records": 1,
+    "longitude": 153.34080692032973,
+    "latitude": -27.673482792491534
+  },
+  {
+    "site_code": 632,
+    "site_name": "Bowling Green Bay",
+    "state": "QLD",
+    "designation_dates": "1993-10-22",
+    "source_boundary_records": 1,
+    "longitude": 147.30755555399804,
+    "latitude": -19.420188933752303
+  },
+  {
+    "site_code": 791,
+    "site_name": "Currawinya Lakes (Currawinya National Park)",
+    "state": "QLD",
+    "designation_dates": "1996-03-11",
+    "source_boundary_records": 1,
+    "longitude": 144.33473853157128,
+    "latitude": -28.811786360657283
+  },
+  {
+    "site_code": 792,
+    "site_name": "Shoalwater and Corio Bays Area (Shoalwater Bay Training Area, in part - Corio Bay)",
+    "state": "QLD",
+    "designation_dates": "1996-03-11",
+    "source_boundary_records": 1,
+    "longitude": 150.5179878124882,
+    "latitude": -22.50314977299554
+  },
+  {
+    "site_code": 793,
+    "site_name": "Ginini Flats Wetland Complex",
+    "state": "ACT",
+    "designation_dates": "1996-03-11",
+    "source_boundary_records": 1,
+    "longitude": 148.7872025308649,
+    "latitude": -35.52543789783345
+  },
+  {
+    "site_code": 797,
+    "site_name": "Pulu Keeling",
+    "state": "EXT",
+    "designation_dates": "1996-03-17",
+    "source_boundary_records": 1,
+    "longitude": 96.82180449691823,
+    "latitude": -11.831934601662754
+  },
+  {
+    "site_code": 798,
+    "site_name": "Little Llangothlin Nature Reserve",
+    "state": "NSW",
+    "designation_dates": "1996-03-17",
+    "source_boundary_records": 1,
+    "longitude": 151.78122497756047,
+    "latitude": -30.08862973138278
+  },
+  {
+    "site_code": 799,
+    "site_name": "Lake Pinaroo (Fort Grey Basin)",
+    "state": "NSW",
+    "designation_dates": "1996-03-17",
+    "source_boundary_records": 1,
+    "longitude": 141.2259309650238,
+    "latitude": -29.097534235490887
+  },
+  {
+    "site_code": 800,
+    "site_name": "Blue Lake",
+    "state": "NSW",
+    "designation_dates": "1996-03-17",
+    "source_boundary_records": 1,
+    "longitude": 148.3137692779688,
+    "latitude": -36.4025329345298
+  },
+  {
+    "site_code": 992,
+    "site_name": "Great Sandy Strait (including Great Sandy Strait, Tin Can Bay and Tin Can Inlet)",
+    "state": "QLD",
+    "designation_dates": "1999-06-14",
+    "source_boundary_records": 1,
+    "longitude": 152.93262747270663,
+    "latitude": -25.622613186872375
+  },
+  {
+    "site_code": 993,
+    "site_name": "Gwydir Wetlands: Gingham and Lower Gwydir (Big Leather) Watercourses",
+    "state": "NSW",
+    "designation_dates": "1999-06-14",
+    "source_boundary_records": 4,
+    "longitude": 149.33245839232853,
+    "latitude": -29.35204281652856
+  },
+  {
+    "site_code": 994,
+    "site_name": "Myall Lakes",
+    "state": "NSW",
+    "designation_dates": "1999-06-14",
+    "source_boundary_records": 6,
+    "longitude": 152.35281575912506,
+    "latitude": -32.48975770023245
+  },
+  {
+    "site_code": 995,
+    "site_name": "NSW Central Murray State Forests",
+    "state": "NSW",
+    "designation_dates": "2003-05-20",
+    "source_boundary_records": 3,
+    "longitude": 144.3872604354144,
+    "latitude": -35.76905687580204
+  },
+  {
+    "site_code": 1048,
+    "site_name": "Becher Point Wetlands",
+    "state": "WA",
+    "designation_dates": "2001-01-05",
+    "source_boundary_records": 1,
+    "longitude": 115.74241561382118,
+    "latitude": -32.38449440619525
+  },
+  {
+    "site_code": 1049,
+    "site_name": "Lake Gore",
+    "state": "WA",
+    "designation_dates": "2001-01-05",
+    "source_boundary_records": 1,
+    "longitude": 121.46660128129555,
+    "latitude": -33.80875245105879
+  },
+  {
+    "site_code": 1050,
+    "site_name": "Muir-Byenup System",
+    "state": "WA",
+    "designation_dates": "2001-01-05",
+    "source_boundary_records": 1,
+    "longitude": 116.75552456594531,
+    "latitude": -34.49778954631146
+  },
+  {
+    "site_code": 1096,
+    "site_name": "Edithvale-Seaford Wetlands",
+    "state": "VIC",
+    "designation_dates": "2001-08-29",
+    "source_boundary_records": 2,
+    "longitude": 145.13999909399564,
+    "latitude": -38.08693413252089
+  },
+  {
+    "site_code": 1220,
+    "site_name": "Ashmore Reef",
+    "state": "EXT",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 1,
+    "longitude": 123.08039794988987,
+    "latitude": -12.237139002975637
+  },
+  {
+    "site_code": 1221,
+    "site_name": "Banrock Station Wetland Complex",
+    "state": "SA",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 1,
+    "longitude": 140.3126217596175,
+    "latitude": -34.18394790176464
+  },
+  {
+    "site_code": 1222,
+    "site_name": "Coringa-Herald and Lihou Reefs and Cays",
+    "state": "EXT",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 1,
+    "longitude": 149.7506157105355,
+    "latitude": -16.850154866521386
+  },
+  {
+    "site_code": 1223,
+    "site_name": "Elizabeth and Middleton Reefs",
+    "state": "EXT",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 1,
+    "longitude": 159.07514172967265,
+    "latitude": -29.700072777346495
+  },
+  {
+    "site_code": 1224,
+    "site_name": "Fivebough and Tuckerbil Swamps",
+    "state": "NSW",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 2,
+    "longitude": 146.43122006490162,
+    "latitude": -34.53036073621028
+  },
+  {
+    "site_code": 1225,
+    "site_name": "The Dales",
+    "state": "EXT",
+    "designation_dates": "2002-10-21",
+    "source_boundary_records": 1,
+    "longitude": 105.56113090407956,
+    "latitude": -10.485736908785658
+  },
+  {
+    "site_code": 1291,
+    "site_name": "Narran Lake Nature Reserve",
+    "state": "NSW",
+    "designation_dates": "1999-06-14",
+    "source_boundary_records": 1,
+    "longitude": 147.4224465390811,
+    "latitude": -29.728608034087575
+  },
+  {
+    "site_code": 1716,
+    "site_name": "Paroo River Wetlands",
+    "state": "NSW",
+    "designation_dates": "2007-09-13",
+    "source_boundary_records": 2,
+    "longitude": 143.5211440846597,
+    "latitude": -30.78700126198391
+  },
+  {
+    "site_code": 2136,
+    "site_name": "Piccaninnie Ponds Karst Wetlands",
+    "state": "SA",
+    "designation_dates": "2012-12-21",
+    "source_boundary_records": 1,
+    "longitude": 140.9199708005044,
+    "latitude": -38.04873008402651
+  },
+  {
+    "site_code": 2344,
+    "site_name": "Glenelg Estuary and Discovery Bay Wetlands",
+    "state": "VIC",
+    "designation_dates": "2018-02-28",
+    "source_boundary_records": 3,
+    "longitude": 141.1216033638851,
+    "latitude": -38.02848445795644
+  },
+  {
+    "site_code": 2520,
+    "site_name": "Caryapundy Swamp",
+    "state": "NSW",
+    "designation_dates": "2021-12-17",
+    "source_boundary_records": 8,
+    "longitude": 142.4773684561386,
+    "latitude": -29.208024548854333
+  }
+]
