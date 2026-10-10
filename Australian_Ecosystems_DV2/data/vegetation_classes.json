@@ -1,0 +1,226 @@
+[
+  {
+    "mvg_code": 1,
+    "mvg_name": "Rainforests and Vine Thickets",
+    "display_family": "Forests and vine thickets",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 2,
+    "mvg_name": "Eucalypt Tall Open Forests",
+    "display_family": "Forests and vine thickets",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 3,
+    "mvg_name": "Eucalypt Open Forests",
+    "display_family": "Forests and vine thickets",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 4,
+    "mvg_name": "Eucalypt Low Open Forests",
+    "display_family": "Forests and vine thickets",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 5,
+    "mvg_name": "Eucalypt Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 6,
+    "mvg_name": "Acacia Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 7,
+    "mvg_name": "Callitris Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 8,
+    "mvg_name": "Casuarina Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 9,
+    "mvg_name": "Melaleuca Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 10,
+    "mvg_name": "Other Forests and Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 11,
+    "mvg_name": "Eucalypt Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 12,
+    "mvg_name": "Tropical Eucalypt Woodlands/Grasslands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 13,
+    "mvg_name": "Acacia Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 14,
+    "mvg_name": "Mallee Woodlands and Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 15,
+    "mvg_name": "Low Closed Forests and Tall Closed Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 16,
+    "mvg_name": "Acacia Shrublands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 17,
+    "mvg_name": "Other Shrublands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 18,
+    "mvg_name": "Heathlands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 19,
+    "mvg_name": "Tussock Grasslands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 20,
+    "mvg_name": "Hummock Grasslands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 21,
+    "mvg_name": "Other Grasslands, Herblands, Sedgelands and Rushlands",
+    "display_family": "Grasslands, herblands, sedges and rushes",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 22,
+    "mvg_name": "Chenopod Shrublands, Samphire Shrublands and Forblands",
+    "display_family": "Shrublands, heathlands and forblands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 23,
+    "mvg_name": "Mangroves",
+    "display_family": "Mangroves",
+    "classified_native": true,
+    "default_comparison": true
+  },
+  {
+    "mvg_code": 24,
+    "mvg_name": "Inland aquatic - freshwater, salt lakes, lagoons",
+    "display_family": "Inland aquatic",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 25,
+    "mvg_name": "Cleared, non-native vegetation, buildings",
+    "display_family": "Cleared / non-native / built",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 26,
+    "mvg_name": "Unclassified native vegetation",
+    "display_family": "Unclassified native",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 27,
+    "mvg_name": "Naturally bare - sand, rock, claypan, mudflat",
+    "display_family": "Naturally bare",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 28,
+    "mvg_name": "Sea and estuaries",
+    "display_family": "Sea / estuaries",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 29,
+    "mvg_name": "Regrowth, modified native vegetation",
+    "display_family": "Regrowth / modified native",
+    "classified_native": false,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 31,
+    "mvg_name": "Other Open Woodlands",
+    "display_family": "Woodlands and open woodlands",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 32,
+    "mvg_name": "Mallee Open Woodlands and Sparse Mallee Shrublands",
+    "display_family": "Mixed woodland / shrub / grass types",
+    "classified_native": true,
+    "default_comparison": false
+  },
+  {
+    "mvg_code": 99,
+    "mvg_name": "Unknown/no data",
+    "display_family": "Unknown / no data",
+    "classified_native": false,
+    "default_comparison": false
+  }
+]
