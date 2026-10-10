@@ -10,9 +10,15 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 13,
-      "gridColor": "#e6e8df"
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "gridColor": "#e6e8df",
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontWeight": "normal",
+      "titleFontWeight": "normal",
+      "labelColor": "#344b3f",
+      "titleColor": "#344b3f"
     },
     "legend": {
       "labelFontSize": 12,

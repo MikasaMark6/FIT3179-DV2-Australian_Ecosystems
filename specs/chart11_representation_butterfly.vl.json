@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Butterfly comparison of vegetation composition: full 25-type extant classified-native denominator on the left and publicly mapped protected classified-native denominator on the right. Ten representative types are shown. Both magnitude scales are 0\u201335%.",
+  "description": "Butterfly comparison of vegetation composition: full 25-type extant classified-native denominator on the left and publicly mapped protected classified-native denominator on the right. Ten representative types are shown. Both magnitude scales are 0\u201340%.",
   "background": null,
   "data": {
     "url": "../data/chart11_representation.json"
@@ -20,22 +20,29 @@
       "value": 0
     }
   ],
-  "spacing": 8,
+  "spacing": 4,
   "config": {
     "font": "Arial",
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 13,
+      "labelFontSize": 14,
+      "titleFontSize": 14,
       "gridColor": "#e6e8df",
-      "domain": false
+      "domain": false,
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontWeight": "normal",
+      "titleFontWeight": "normal",
+      "labelColor": "#344b3f",
+      "titleColor": "#344b3f"
     },
     "title": {
       "font": "Arial",
-      "fontSize": 13,
-      "color": "#344b3f"
+      "fontSize": 14,
+      "color": "#344b3f",
+      "fontWeight": "normal"
     }
   },
   "resolve": {
@@ -72,7 +79,7 @@
           "scale": {
             "domain": [
               0,
-              35
+              40
             ],
             "reverse": true,
             "nice": false
@@ -83,7 +90,8 @@
               0,
               10,
               20,
-              30
+              30,
+              40
             ]
           }
         },
@@ -122,14 +130,16 @@
       }
     },
     {
-      "width": 240,
+      "width": 210,
       "height": 300,
       "mark": {
         "type": "text",
         "align": "center",
-        "fontSize": 13,
+        "fontSize": 14,
         "color": "#344b3f",
-        "cursor": "pointer"
+        "cursor": "pointer",
+        "font": "Arial",
+        "fontWeight": "normal"
       },
       "encoding": {
         "y": {
@@ -185,7 +195,7 @@
       "title": "Within public protection",
       "mark": {
         "type": "bar",
-        "color": "#246875",
+        "color": "#315d49",
         "height": 20,
         "cursor": "pointer"
       },
@@ -206,7 +216,7 @@
           "scale": {
             "domain": [
               0,
-              35
+              40
             ],
             "reverse": false,
             "nice": false
@@ -217,7 +227,8 @@
               0,
               10,
               20,
-              30
+              30,
+              40
             ]
           }
         },
@@ -255,5 +266,6 @@
         ]
       }
     }
-  ]
+  ],
+  "bounds": "flush"
 }
