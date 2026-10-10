@@ -28,3 +28,31 @@ button:disabled{opacity:0.5;cursor:default}select:disabled{opacity:0.65}
 #status{min-height:23px;line-height:1.6}
 @media(max-width:850px){.map-layout{grid-template-columns:1fr}.chart-card{padding:22px}.map-inspector{min-height:0}.card-heading h2{font-size:28px}}
 @media(max-width:520px){h1{font-size:52px;letter-spacing:-1px}.chart-card{padding:16px}.card-heading h2{font-size:25px}header .intro{font-size:18px}.selection-strip{gap:6px}}
+
+/* Compact rhythm: keep readable grouping without large blank bands. */
+header{padding:32px 0 28px}
+h1{font-size:clamp(48px,6.3vw,78px);line-height:1.06;margin:14px 0 10px}
+.hero-subtitle{font-size:27px;margin:0 0 12px}
+header .intro{font-size:18px;line-height:1.6;max-width:920px}
+.header-meta{margin-top:14px}
+.chapter-nav{padding-top:18px;gap:8px}
+.context{padding:24px 0 18px;gap:20px}
+.context p{margin:8px 0 0;line-height:1.6}
+.controls{padding:14px 16px;gap:10px 14px}
+.controls p{font-size:13px;line-height:1.5}
+.selection-strip{padding:10px 0 8px}
+#status{margin:8px 0;font-size:13px}
+.chart-card{padding:24px;margin:14px 0 22px}
+.card-heading>p{margin:8px 0 14px}
+.card-heading h2{margin:8px 0;font-size:29px}
+.insight{margin:14px 0;padding:12px 14px}
+.inline{margin:0 0 14px}
+.method{margin-top:14px;padding-top:12px}
+.map-layout{grid-template-columns:minmax(0,1fr) 255px;gap:22px}
+.map-inspector{min-height:144px;padding:13px;margin-bottom:16px}
+.legend-item{margin:10px 0}
+.planned-part{padding:20px 0 4px;margin-top:18px}
+.planned-charts{gap:14px;margin:14px 0 22px}
+.chart-placeholder{padding:18px}
+@media(max-width:850px){header{padding:26px 0 22px}.map-layout{grid-template-columns:1fr}.chart-card{padding:18px}.map-inspector{min-height:0}}
+@media(max-width:520px){h1{font-size:48px}.hero-subtitle{font-size:24px}.context{padding-top:18px}.chart-card{padding:14px}.card-heading h2{font-size:25px}}

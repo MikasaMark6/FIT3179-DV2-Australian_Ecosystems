@@ -81,7 +81,7 @@ The included `.nojekyll` file supports direct static-file publishing. Relative p
 | `app.js` | Implemented Vega-Lite specifications and linked focus for charts 1–3 |
 | `data/` | Prepared JSON, GeoJSON and TopoJSON data for the twelve-chart plan |
 | `vendor/` | Local Vega libraries and their licences; no chart-library CDN dependency |
-| `assets/maps/` | Lossless display map and native-group overlays, used as Vega-Lite image marks |
+| Embedded map cache in `app.js` | Lossless map and overlays; no separate PNG upload is required |
 | `docs/UPDATE_GUIDE.md` | Exact files to replace and an explanation of HTML, CSS and JavaScript |
 | `docs/PROJECT_PLAN.md` | English chart titles, metrics, planned idioms and implementation status |
 | `docs/SOURCES_AND_METHODS.md` | Data sources, transformations, exclusions and interpretation limits |
@@ -93,11 +93,11 @@ Only Part 1 datasets are fetched by the current page. Additional datasets are su
 
 ## Part 1 interactions
 
-- **Comparison set:** switch between ten representative native types and all 25 classified native types.
+- **Comparison set:** fixed to ten representative native vegetation types for a consistent chart layout.
 - **Focus:** select an official vegetation group from the menu, click its location on the map, click a bar, or click a heatmap cell. Clicking the same chart type again clears the selection.
 - **Linked emphasis:** the selected group remains highlighted across the three charts while other marks fade.
-- Selecting a type outside the representative subset automatically expands the comparison set to all 25 types.
-- Switching back to the representative subset clears a focus that is outside that subset.
+- All mapped groups can be identified in the Map Explorer panel. Only the ten representative comparison types can be selected for linked highlighting.
+- The focus menu contains the same ten types shown in the comparison charts.
 - **Clear focus:** restore the normal view.
 - **Hover:** read official names, mapped areas and percentage values. The map displays its hovered type in the dedicated Map Explorer panel, outside the data marks.
 
@@ -115,9 +115,9 @@ Full definitions and original source links are recorded in [Sources and methods]
 
 ## Validation and remaining work
 
-The original live page was inspected in a browser and its selection controls operated successfully. The updated Part 1 passed Vega-Lite compilation, Vega runtime SVG rendering, linked focus signal checks, 10/25-type row-count checks and state denominator checks. Validation used the actual chart specifications in a Node runtime.
+The original live page was inspected in a browser and its selection controls operated successfully. The updated Part 1 passed Vega-Lite compilation, Vega runtime SVG rendering, linked focus signal checks, ten-type row-count checks and state denominator checks. Validation used the actual chart specifications in a Node runtime.
 
-**The updated rendering strategy has passed runtime and cell-lookup checks, but its final browser/DOM layout and pointer interactions still need verification after uploading.** Open the live page and check chart loading, hover details, focus selection, subset switching and laptop-width layout. The remaining nine chart containers are placeholders and must not be counted as completed visualisations.
+**The updated rendering strategy has passed runtime and cell-lookup checks, but its final browser/DOM layout and pointer interactions still need verification after uploading.** Open the live page and check chart loading, hover details, focus selection, fixed ten-type comparison and laptop-width layout. The remaining nine chart containers are placeholders and must not be counted as completed visualisations.
 
 Before submission: implement charts 4–12, review source attribution, test the complete page, complete the required student hand-drawn sketch and written course components, and confirm the final submission instructions. Update draft labels and this README to reflect the completed work.
 
@@ -133,4 +133,8 @@ The page uses **Vega 5.33.0**, **Vega-Lite 5.23.0** and **Vega-Embed 6.29.0**, b
 
 The main heading is now **Australian Ecosystems**, with **A continent of contrasts.** as a subordinate subtitle. Course information is kept in the footer. Two font families are used: Georgia (serif) for headings and Arial (sans serif) for body text, controls and chart labels. Shared widths, margins and heading styles establish alignment and visual hierarchy.
 
-The map uses lossless cached images inside a Vega-Lite specification instead of 105,280 individually interactive rectangles. A direct grid lookup identifies the official MVG under the pointer. At most two visible image marks are required for the map. This preserves all original display cells and leaves statistical data unchanged. The first selection of an uncached type may briefly load its small overlay image. No zoom or pan control is included in this update.
+The map uses lossless cached images inside a Vega-Lite specification instead of 105,280 individually interactive rectangles. A direct grid lookup identifies the official MVG under the pointer. At most two visible image marks are required for the map. This preserves all original display cells and leaves statistical data unchanged. The base image and ten overlay images are embedded as PNG data URLs in `app.js`, so missing external image paths cannot hide the map. No zoom or pan control is included in this update.
+
+## Compact layout and missing-map repair
+
+The previously deployed map asset path returned HTTP 404. Map images are now embedded directly in `app.js`. The page uses a fixed ten-type comparison set, while denominators retain the complete 25-type classified-native set. Header, section and control spacing have been reduced. The categorical map still displays all available mapped classes.

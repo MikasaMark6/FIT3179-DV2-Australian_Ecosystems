@@ -3,7 +3,7 @@
     "map": {
       "width": 725,
       "height": 693.7227251190741,
-      "rows": 26
+      "rows": 11
     },
     "bar": {
       "width": 737,
@@ -16,24 +16,15 @@
       "rows": 80
     }
   },
-  "all": {
-    "bar": {
-      "rows": 25,
-      "width": 737,
-      "height": 850
-    },
-    "heatmap": {
-      "rows": 200,
-      "width": 737,
-      "height": 850
-    }
-  },
+  "all": {},
   "signals": {
     "map": 20,
     "bar": 20,
     "heatmap": 20
   },
   "state_denominators": true,
+  "self_contained_map": true,
+  "fixed_comparison_types": 10,
   "chart_click_toggle_checks": "bar and heatmap passed",
   "map_visible_marks": {
     "normal": 1,

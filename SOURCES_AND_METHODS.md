@@ -36,3 +36,6 @@ Data parsing, preprocessing scripts, consistency checks and draft layout were as
 
 Display performance update
 The approximately 5 km compact categorical grid is encoded losslessly into a base PNG and one transparent mask per classified native MVG. Vega-Lite renders these as image marks with the same projected coordinate aspect. Direct row/column lookup into the original display-grid codes provides hover and click identification. Every cached pixel and all 25 selection masks were checked against the unchanged source display grid. No statistical tables or area denominators were modified.
+
+Map dependency repair
+The deployed external display-image path returned HTTP 404. The same verified lossless base PNG and the ten selected MVG masks are now embedded as data URLs in app.js. The compact display grid remains the pointer-lookup input; original statistical data are unchanged. All vegetation comparison charts in the current page use a fixed ten-type subset with full 25-type denominators.
