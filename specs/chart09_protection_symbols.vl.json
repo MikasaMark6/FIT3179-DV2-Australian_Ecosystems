@@ -1,0 +1,189 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "width": 620,
+  "height": 460,
+  "padding": 8,
+  "autosize": "pad",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "gridColor": "#e6e8df"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ]
+  },
+  "params": [
+    {
+      "name": "regionFocus",
+      "value": ""
+    }
+  ],
+  "data": {
+    "url": "../data/ibra71_regions.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "regions"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.properties.REG_CODE_7",
+      "as": "bioregion_code"
+    },
+    {
+      "calculate": "datum.properties.REG_NAME_7",
+      "as": "bioregion_name"
+    },
+    {
+      "calculate": "datum.properties.protected_pct",
+      "as": "protected_pct"
+    },
+    {
+      "calculate": "datum.properties.protected_area_ha / 100",
+      "as": "protected_area_km2"
+    },
+    {
+      "calculate": "datum.protected_pct < 5 ? \"0\u2013<5%\" : datum.protected_pct < 10 ? \"5\u2013<10%\" : datum.protected_pct < 17 ? \"10\u2013<17%\" : datum.protected_pct < 30 ? \"17\u2013<30%\" : \"30\u2013100%\"",
+      "as": "protection_band"
+    },
+    {
+      "filter": "datum.properties.terrestrial_comparison_applicable && datum.bioregion_code != \"PSI\" && datum.bioregion_code != \"ITI\""
+    }
+  ],
+  "description": "Circle area is proportional to official protected area in square kilometres. Circles are bioregion summaries positioned at representative interior points, not reserves.",
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e2e6dd",
+        "stroke": "#fffdf7",
+        "strokeWidth": 0.6,
+        "clip": true
+      }
+    },
+    {
+      "data": {
+        "url": "../data/chart08_09_ibra_protection.json"
+      },
+      "transform": [
+        {
+          "filter": "datum.terrestrial_comparison_applicable && datum.bioregion_code != \"PSI\" && datum.bioregion_code != \"ITI\""
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "fill": "#367c7d",
+        "fillOpacity": 0.58,
+        "stroke": "#fffdf7",
+        "strokeWidth": 0.8,
+        "clip": true,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": "regionFocus == \"\" || datum.bioregion_code == regionFocus",
+            "value": 1
+          },
+          "value": 0.28
+        },
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "protected_area_km2",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              200000
+            ],
+            "range": [
+              0,
+              1500
+            ]
+          },
+          "legend": {
+            "title": "Protected area (km\u00b2)",
+            "orient": "bottom",
+            "values": [
+              10000,
+              50000,
+              150000
+            ],
+            "format": ",.0f",
+            "direction": "horizontal",
+            "titleLimit": 300
+          }
+        },
+        "order": {
+          "field": "protected_area_km2",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "bioregion_name",
+            "title": "Bioregion",
+            "type": "nominal"
+          },
+          {
+            "field": "protected_pct",
+            "title": "Protected land (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "protected_area_km2",
+            "title": "Protected area (km\u00b2)",
+            "type": "quantitative",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.bioregion_code == regionFocus"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fillOpacity": 0,
+        "stroke": "#9e651d",
+        "strokeWidth": 2,
+        "clip": true,
+        "tooltip": false
+      }
+    }
+  ]
+}

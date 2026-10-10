@@ -1,0 +1,157 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "background": null,
+  "width": 620,
+  "height": 460,
+  "padding": 8,
+  "autosize": "pad",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "gridColor": "#e6e8df"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [
+      -18,
+      -36
+    ],
+    "rotate": [
+      -134,
+      0
+    ],
+    "center": [
+      0,
+      -27
+    ]
+  },
+  "params": [
+    {
+      "name": "regionFocus",
+      "value": ""
+    }
+  ],
+  "data": {
+    "url": "../data/ibra71_regions.topojson",
+    "format": {
+      "type": "topojson",
+      "feature": "regions"
+    }
+  },
+  "transform": [
+    {
+      "calculate": "datum.properties.REG_CODE_7",
+      "as": "bioregion_code"
+    },
+    {
+      "calculate": "datum.properties.REG_NAME_7",
+      "as": "bioregion_name"
+    },
+    {
+      "calculate": "datum.properties.protected_pct",
+      "as": "protected_pct"
+    },
+    {
+      "calculate": "datum.properties.protected_area_ha / 100",
+      "as": "protected_area_km2"
+    },
+    {
+      "calculate": "datum.protected_pct < 5 ? \"0\u2013<5%\" : datum.protected_pct < 10 ? \"5\u2013<10%\" : datum.protected_pct < 17 ? \"10\u2013<17%\" : datum.protected_pct < 30 ? \"17\u2013<30%\" : \"30\u2013100%\"",
+      "as": "protection_band"
+    },
+    {
+      "filter": "datum.properties.terrestrial_comparison_applicable && datum.bioregion_code != \"PSI\" && datum.bioregion_code != \"ITI\""
+    }
+  ],
+  "description": "Official CAPAD 2024 terrestrial protection percentage by IBRA 7.1 bioregion. Two regions without applicable terrestrial statistics are excluded. Main view omits two external island regions; website offers an all-region view.",
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#fffdf7",
+        "strokeWidth": 0.65,
+        "clip": true,
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "test": "regionFocus == \"\" || datum.bioregion_code == regionFocus",
+            "value": 1
+          },
+          "value": 0.28
+        },
+        "color": {
+          "field": "protection_band",
+          "type": "ordinal",
+          "scale": {
+            "domain": [
+              "0\u2013<5%",
+              "5\u2013<10%",
+              "10\u2013<17%",
+              "17\u2013<30%",
+              "30\u2013100%"
+            ],
+            "range": [
+              "#f2edcf",
+              "#cbd8aa",
+              "#94b986",
+              "#54896a",
+              "#245645"
+            ]
+          },
+          "legend": {
+            "title": "Protected land (%)",
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3
+          }
+        },
+        "tooltip": [
+          {
+            "field": "bioregion_name",
+            "title": "Bioregion",
+            "type": "nominal"
+          },
+          {
+            "field": "protected_pct",
+            "title": "Protected land (%)",
+            "type": "quantitative",
+            "format": ".2f"
+          },
+          {
+            "field": "protected_area_km2",
+            "title": "Protected area (km\u00b2)",
+            "type": "quantitative",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.bioregion_code == regionFocus"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "fillOpacity": 0,
+        "stroke": "#9e651d",
+        "strokeWidth": 2,
+        "clip": true,
+        "tooltip": false
+      }
+    }
+  ]
+}

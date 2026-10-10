@@ -1,0 +1,151 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Public CAPAD 2024 boundary coverage divided by full extant area for ten representative NVIS v7 MVGs. The remainder does not establish that land is unprotected.",
+  "background": null,
+  "width": 620,
+  "height": 300,
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFontSize": 13,
+      "titleFontSize": 13,
+      "gridColor": "#e6e8df"
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "titleFontSize": 12
+    }
+  },
+  "params": [
+    {
+      "name": "vegetationFocus",
+      "value": 0
+    }
+  ],
+  "data": {
+    "url": "../data/chart10_public_protection.json"
+  },
+  "transform": [
+    {
+      "filter": "datum.default_comparison"
+    },
+    {
+      "calculate": "datum.mvg_code == 1 ? \"Rainforests & Vine Thickets\" : datum.mvg_code == 9 ? \"Melaleuca Forests & Woodlands\" : datum.mvg_code == 14 ? \"Mallee Woodlands & Shrublands\" : datum.mvg_name",
+      "as": "short_name"
+    },
+    {
+      "calculate": "100",
+      "as": "full_pct"
+    },
+    {
+      "calculate": "0",
+      "as": "baseline"
+    }
+  ],
+  "encoding": {
+    "y": {
+      "field": "short_name",
+      "type": "nominal",
+      "sort": {
+        "field": "mapped_protection_pct",
+        "order": "descending"
+      },
+      "axis": {
+        "title": null,
+        "labelLimit": 265,
+        "labelFontSize": 14
+      }
+    },
+    "opacity": {
+      "condition": {
+        "test": "vegetationFocus == 0 || datum.mvg_code == vegetationFocus",
+        "value": 1
+      },
+      "value": 0.25
+    },
+    "tooltip": [
+      {
+        "field": "mvg_name",
+        "title": "Vegetation group",
+        "type": "nominal"
+      },
+      {
+        "field": "mapped_protection_pct",
+        "title": "Covered by public boundaries (%)",
+        "type": "quantitative",
+        "format": ".1f"
+      },
+      {
+        "field": "not_covered_by_public_boundary_pct",
+        "title": "Not covered by public boundaries (%)",
+        "type": "quantitative",
+        "format": ".1f"
+      },
+      {
+        "field": "extent_ha",
+        "title": "Extant area (ha)",
+        "type": "quantitative",
+        "format": ",.0f"
+      },
+      {
+        "field": "mapped_protected_ha",
+        "title": "Covered area (ha)",
+        "type": "quantitative",
+        "format": ",.0f"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#dfe3d7",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "baseline",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              0,
+              100
+            ]
+          },
+          "axis": {
+            "title": "Share of extant vegetation area (%)",
+            "values": [
+              0,
+              25,
+              50,
+              75,
+              100
+            ]
+          }
+        },
+        "x2": {
+          "field": "full_pct"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "bar",
+        "color": "#315d49",
+        "cursor": "pointer"
+      },
+      "encoding": {
+        "x": {
+          "field": "baseline",
+          "type": "quantitative"
+        },
+        "x2": {
+          "field": "mapped_protection_pct"
+        }
+      }
+    }
+  ]
+}
