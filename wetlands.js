@@ -19,11 +19,11 @@
     if(view)view.signal('selectedSite',selected).runAsync();
   }
   function spec() {
-    const width=Math.max(240,Math.floor(el('wetland-map').clientWidth));
+    const width=Math.max(240,Math.min(600,Math.floor(el('wetland-map').clientWidth)));
     const all=el('wetland-view').value==='all';
     const [west,south,east,north]=all?[95,-45,162,-9]:[110,-45,156,-9];
     return {
-      $schema:'https://vega.github.io/schema/vega-lite/v5.json',background:null,width,height:Math.round(width*(all?0.62:0.78)),padding:0,autosize:'none',
+      $schema:'https://vega.github.io/schema/vega-lite/v5.json',background:null,width,height:Math.round(width*0.957),padding:0,autosize:'none',
       config:{font:'Arial',view:{stroke:null}},
       projection:{type:'mercator',fit:{type:'Feature',geometry:{type:'Polygon',coordinates:[[[west,south],[west,north],[east,north],[east,south],[west,south]]]}}},
       params:[{name:'selectedSite',value:selected}],

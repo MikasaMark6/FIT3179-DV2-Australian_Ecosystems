@@ -57,7 +57,7 @@ function mapDetails(code){
  $('map-type-note').textContent=`MVG ${d.mvg_code} · ${d.classified_native && d.default_comparison?'Click to select this comparison type.':'Context type; not included in the ten-type comparisons.'}`;
 }
 async function drawMap(){
- const w=Math.max(230,Math.floor($('map').clientWidth));
+ const w=Math.max(230,Math.min(600,Math.floor($('map').clientWidth)));
  const extentX=grid.width*grid.affine_gdal[1],extentY=-grid.height*grid.affine_gdal[5],height=w*extentY/extentX;
  const imageMark={type:'image',width:w,height,align:'left',baseline:'top',aspect:false,tooltip:false};
  const imageEncoding={x:{value:0},y:{value:0},url:{field:'url',type:'nominal'}};

@@ -215,3 +215,17 @@ footer{padding:18px 0 24px}
 #bird-map .vega-embed{width:fit-content;margin:0 auto}
 @media(max-width:700px){.waffle-layout.waffle-two-column{grid-template-columns:minmax(0,1fr);gap:14px}.waffle-two-column .waffle-figure{width:min(320px,100%);justify-self:center}.waffle-two-column .waffle-guide{max-width:none}.waffle-two-column .waffle-secondary{grid-column:auto;grid-row:auto}}
 @media(max-width:400px){.waffle-two-column .waffle-primary strong{font-size:42px}}
+
+/* Consistent map plot dimensions, with independent space for legends. */
+#map,#bird-map,#wetland-map,#protection-map,#protection-symbols{width:100%;max-width:600px}
+#bird-map{margin:0 auto}
+.map-layout{grid-template-columns:minmax(0,600px) minmax(0,230px);justify-content:space-between;gap:18px}
+/* The closing card adapts as a two-column unit; waffle cells stay square. */
+.waffle-layout.waffle-two-column{grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:28px;width:100%;align-items:center}
+.waffle-two-column .waffle-figure{width:100%;max-width:360px;justify-self:center}
+.waffle-two-column .waffle-guide{width:100%;max-width:440px;justify-self:center}
+.waffle-two-column .waffle-numbers{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.waffle-two-column .waffle-primary strong{font-size:clamp(42px,5vw,54px)}
+.waffle-two-column .waffle-secondary strong{font-size:32px}
+@media(max-width:850px){.map-layout{grid-template-columns:minmax(0,1fr);gap:12px}.map-layout>.chart{margin:0 auto}}
+@media(max-width:700px){.waffle-layout.waffle-two-column{grid-template-columns:minmax(0,1fr);gap:14px}.waffle-two-column .waffle-figure{max-width:320px}.waffle-two-column .waffle-guide{max-width:none}}

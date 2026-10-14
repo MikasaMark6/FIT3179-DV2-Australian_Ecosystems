@@ -58,3 +58,7 @@ Chart 12 uses three desktop columns: a primary 22.57% number and secondary 77.43
 ## Two-column closing layout
 
 The final card now places a 320 px waffle on the left and the two national percentages, integrated colour keys and concise reading instructions on the right. The two columns are centred as a group with a 32 px gap; narrower screens stack the figure above the text. This supersedes the earlier three-column layout.
+
+## Adaptive closing-card dimensions
+
+The final two-column card uses fractional column widths and a plot that adapts to its available width up to 360 px. Below 700 px the plot stacks above the explanation and is capped at 320 px. Equal-area square cells and the exact fractional split are preserved; the chart is not stretched to fill a rectangular column.

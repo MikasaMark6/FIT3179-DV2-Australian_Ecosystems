@@ -30,7 +30,7 @@
     views[id].addEventListener('click',(_event,item)=>{if(item?.datum?.mvg_code)setFocus(focus===item.datum.mvg_code?0:item.datum.mvg_code);});
   }
   function draw(){
-    queue=queue.then(async()=>{await embed('extent-chart',specs[0],pairs);await embed('remaining-chart',specs[1],remaining);annotations();el('landscape-status').textContent='Hover for both area estimates or the overlap percentage. Click a point or line to focus on a type in both charts; click the same type again to clear.';})
+    queue=queue.then(async()=>{await embed('extent-chart',specs[0],pairs);await embed('remaining-chart',specs[1],remaining);annotations();el('landscape-status').textContent='Hover for values. Click a type to highlight both charts; click again to clear.';})
       .catch(e=>{console.error(e);el('landscape-status').textContent='Landscape charts could not load. '+e.message;});
     return queue;
   }

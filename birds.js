@@ -16,14 +16,14 @@
     el('bird-status').textContent = `${rows.length.toLocaleString('en-AU')} of ${selectedFeatures().length.toLocaleString('en-AU')} recorded grids shown · ${minimum ? `At least ${minimum.toLocaleString('en-AU')} records per grid` : 'All record counts'}`;
   }
   function buildSpec() {
-    const width = Math.max(240, Math.min(760, Math.floor(el('bird-map').clientWidth)));
+    const width = Math.max(240, Math.min(600, Math.floor(el('bird-map').clientWidth)));
     const all = el('bird-view').value === 'all';
     const box = all ? [95, -56, 170, -8] : [110, -45, 156, -9];
     const [west, south, east, north] = box;
     const fit = {type:'Feature', geometry:{type:'Polygon', coordinates:[[[west,south],[west,north],[east,north],[east,south],[west,south]]]}};
     return {
       $schema:'https://vega.github.io/schema/vega-lite/v5.json', background:null,
-      width, height:Math.round(Math.min(610, width * (all ? 0.66 : 0.88))), padding:8,
+      width, height:Math.round(width * 0.957), padding:8,
       config:{font:'Arial',view:{stroke:null},legend:{labelFontSize:13,titleFontSize:13,titleFontWeight:'normal'}},
       projection:{type:'mercator',fit},
       params:[{name:'minimumRecords',value:Number(el('bird-minimum').value)}],

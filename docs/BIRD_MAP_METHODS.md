@@ -25,3 +25,7 @@ The annotation counts displayed grids with at least 200 recorded species, then r
 ## Plot sizing refinement
 
 The full-width card uses a centred plot capped at 760 px wide. Its main geographic view uses a taller viewport (up to 610 px), allowing the actual map to appear larger with less horizontal blank space. Projection, geographic fit bounds, filters, species values and colour scale are unchanged.
+
+## Shared map plot dimensions
+
+All map plots now use a maximum width of 600 px and approximately 0.957 × width in height. The categorical raster preserves its source extent aspect ratio (approximately 0.957). The other plots use that aspect ratio as their viewport; their own projections and geographic extents remain unchanged. Map legends occupy additional space and are not part of the common plot size. Smaller screens reduce plot dimensions proportionally. This supersedes the earlier bird-only 760 px viewport.

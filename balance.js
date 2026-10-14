@@ -25,7 +25,7 @@
     if(views['representation-chart'])views['representation-chart'].finalize();
     views['representation-chart']=(await vegaEmbed('#representation-chart',s,{renderer:'svg',actions:false,tooltip:{theme:'light'}})).view;
     views['representation-chart'].addEventListener('click',(_e,item)=>{if(item?.datum?.mvg_code)selectType(focus===item.datum.mvg_code?0:item.datum.mvg_code);});
-    const w=JSON.parse(JSON.stringify(specs[1]));w.data={values:cells};w.params[0].value=waffleFocus;w.width=w.height=Math.min(320,Math.floor(el('national-waffle').clientWidth));
+    const w=JSON.parse(JSON.stringify(specs[1]));w.data={values:cells};w.params[0].value=waffleFocus;w.width=w.height=Math.min(360,Math.floor(el('national-waffle').clientWidth));
     if(views['national-waffle'])views['national-waffle'].finalize();
     views['national-waffle']=(await vegaEmbed('#national-waffle',w,{renderer:'svg',actions:false,tooltip:{theme:'light'}})).view;
     views['national-waffle'].addEventListener('click',(_e,item)=>{const category=item?.datum?.coverage;if(category)selectCoverage(waffleFocus===category?'':category);});
