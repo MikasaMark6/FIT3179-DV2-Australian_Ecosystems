@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "100 cells represent national land share in official CAPAD 2024 statistics. Green area includes 22 full cells and 56.5941% of the 23rd cell. Cell locations have no geographic meaning.",
   "background": null,
-  "width": 340,
-  "height": 340,
+  "width": 320,
+  "height": 320,
   "padding": 0,
   "autosize": "none",
   "config": {

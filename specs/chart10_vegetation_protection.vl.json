@@ -3,7 +3,7 @@
   "description": "Public CAPAD 2024 boundary coverage divided by full extant area for ten representative NVIS v7 MVGs. The remainder does not establish that land is unprotected.",
   "background": null,
   "width": 620,
-  "height": 300,
+  "height": 280,
   "config": {
     "font": "Arial",
     "view": {

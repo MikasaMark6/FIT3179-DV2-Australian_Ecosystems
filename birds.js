@@ -23,7 +23,7 @@
     const fit = {type:'Feature', geometry:{type:'Polygon', coordinates:[[[west,south],[west,north],[east,north],[east,south],[west,south]]]}};
     return {
       $schema:'https://vega.github.io/schema/vega-lite/v5.json', background:null,
-      width, height:Math.round(Math.min(520, width * (all ? 0.66 : 0.78))), padding:8,
+      width, height:Math.round(Math.min(490, width * (all ? 0.66 : 0.78))), padding:8,
       config:{font:'Arial',view:{stroke:null},legend:{labelFontSize:13,titleFontSize:13,titleFontWeight:'normal'}},
       projection:{type:'mercator',fit},
       params:[{name:'minimumRecords',value:Number(el('bird-minimum').value)}],

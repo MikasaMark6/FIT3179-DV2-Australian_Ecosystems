@@ -36,7 +36,7 @@
   }
   async function start(){
     try{
-      const load=async url=>{const r=await fetch(url);if(!r.ok)throw Error(url+': HTTP '+r.status);return r.json();};
+      const load=async url=>{const r=await fetch(url,url.startsWith('specs/')?{cache:'no-cache'}:{});if(!r.ok)throw Error(url+': HTTP '+r.status);return r.json();};
       [pairs,remaining,...specs]=await Promise.all([load('data/chart06_pre1750_vs_extant.json'),load('data/chart07_same_category_remaining.json'),load('specs/chart06_connected_dot.vl.json'),load('specs/chart07_lollipop.vl.json')]);
       await draw();
       let timer,previous=window.innerWidth;window.addEventListener('resize',()=>{if(previous===window.innerWidth)return;previous=window.innerWidth;clearTimeout(timer);timer=setTimeout(draw,250);});

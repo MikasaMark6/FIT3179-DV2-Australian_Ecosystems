@@ -54,7 +54,7 @@
   "hconcat": [
     {
       "width": 280,
-      "height": 300,
+      "height": 280,
       "title": "All native vegetation",
       "mark": {
         "type": "bar",
@@ -131,7 +131,7 @@
     },
     {
       "width": 210,
-      "height": 300,
+      "height": 280,
       "mark": {
         "type": "text",
         "align": "center",
@@ -191,7 +191,7 @@
     },
     {
       "width": 280,
-      "height": 300,
+      "height": 280,
       "title": "Within public protection",
       "mark": {
         "type": "bar",
