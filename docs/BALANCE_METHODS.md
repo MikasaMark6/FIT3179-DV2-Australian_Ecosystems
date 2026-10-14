@@ -54,3 +54,7 @@ Both magnitude axes explicitly show 0, 10, 20, 30 and 40%. Zero remains nearest 
 ## Final-card reading hierarchy
 
 Chart 12 uses three desktop columns: a primary 22.57% number and secondary 77.43% number on the left, a 320 px waffle in the middle, and a separate legend and partial-cell explanation on the right. The large number uses the existing Georgia heading family; explanatory text remains Arial. No annotation overlays cells. The guide moves below at narrower widths and the figure stacks on small screens. The official snapshot and unpublished-boundary scope remain in a concise footnote.
+
+## Two-column closing layout
+
+The final card now places a 320 px waffle on the left and the two national percentages, integrated colour keys and concise reading instructions on the right. The two columns are centred as a group with a 32 px gap; narrower screens stack the figure above the text. This supersedes the earlier three-column layout.

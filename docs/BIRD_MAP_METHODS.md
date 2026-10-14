@@ -21,3 +21,7 @@ Hover shows the grid ID, species count, record count, observation year and grid 
 ## Data discovery annotation
 
 The annotation counts displayed grids with at least 200 recorded species, then reports how many have centre longitude at least 140 degrees east. It updates with extent and record-count filters. Default: 94 of 100 high-richness displayed grids are east of 140 degrees east. This describes recorded patterns, without attributing cause or correcting effort.
+
+## Plot sizing refinement
+
+The full-width card uses a centred plot capped at 760 px wide. Its main geographic view uses a taller viewport (up to 610 px), allowing the actual map to appear larger with less horizontal blank space. Projection, geographic fit bounds, filters, species values and colour scale are unchanged.

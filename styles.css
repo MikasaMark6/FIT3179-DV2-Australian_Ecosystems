@@ -203,3 +203,15 @@ footer{padding:18px 0 24px}
 @media(max-width:900px){.waffle-layout.waffle-summary{grid-template-columns:minmax(150px,1fr) 320px;gap:14px}}
 @media(max-width:600px){.waffle-layout.waffle-summary{grid-template-columns:minmax(0,1fr);gap:12px}.waffle-figure{width:min(320px,100%)}}
 @media(max-width:520px){.chart-card{padding:12px}}
+
+/* Balance the closing card in two columns and let the bird geography fill its plot. */
+.waffle-layout.waffle-two-column{grid-template-columns:320px minmax(0,420px);gap:32px;align-items:center;justify-content:center;margin:12px 0}
+.waffle-two-column .waffle-numbers{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:baseline}
+.waffle-two-column .waffle-primary strong{font-size:50px}
+.waffle-two-column .waffle-secondary strong{font-size:30px}
+.waffle-two-column .waffle-guide{max-width:420px;width:100%}
+.waffle-two-column .waffle-guide p{font-size:14px;line-height:1.5;margin:12px 0}
+.waffle-two-column .coverage-key{vertical-align:baseline}
+#bird-map .vega-embed{width:fit-content;margin:0 auto}
+@media(max-width:700px){.waffle-layout.waffle-two-column{grid-template-columns:minmax(0,1fr);gap:14px}.waffle-two-column .waffle-figure{width:min(320px,100%);justify-self:center}.waffle-two-column .waffle-guide{max-width:none}.waffle-two-column .waffle-secondary{grid-column:auto;grid-row:auto}}
+@media(max-width:400px){.waffle-two-column .waffle-primary strong{font-size:42px}}
