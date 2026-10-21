@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Butterfly comparison of vegetation composition: full 25-type extant classified-native denominator on the left and publicly mapped protected classified-native denominator on the right. Ten representative types are shown. Both magnitude scales are 0\u201340%.",
+  "description": "Butterfly comparison of vegetation composition: full 25-type extant classified-native denominator on the left and publicly mapped protected classified-native denominator on the right. Ten representative types are shown. Both magnitude scales are 0–40%.",
   "background": null,
   "data": {
     "url": "../data/chart11_representation.json"
@@ -27,8 +27,8 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 14,
-      "titleFontSize": 14,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "gridColor": "#e6e8df",
       "domain": false,
       "labelFont": "Arial",
@@ -43,6 +43,12 @@
       "fontSize": 14,
       "color": "#344b3f",
       "fontWeight": "normal"
+    },
+    "legend": {
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "resolve": {
@@ -195,7 +201,7 @@
       "title": "Within public protection",
       "mark": {
         "type": "bar",
-        "color": "#315d49",
+        "color": "#367c7d",
         "height": 20,
         "cursor": "pointer"
       },

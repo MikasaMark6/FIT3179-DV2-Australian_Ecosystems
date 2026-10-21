@@ -16,8 +16,8 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 14,
-      "titleFontSize": 14,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "titleFontWeight": "normal",
       "labelColor": "#344b3f",
       "titleColor": "#344b3f",
@@ -28,8 +28,10 @@
       "titlePadding": 12
     },
     "legend": {
-      "labelFontSize": 13,
-      "titleFontSize": 13
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "description": "Lollipop chart of historical cells that remain mapped as the same MVG, divided by the estimated pre-1750 area for that MVG. It is not extant total area divided by historical total area, nor an ecological-condition measure.",
@@ -120,7 +122,7 @@
           {
             "field": "same_category_km2",
             "type": "quantitative",
-            "title": "Same-category spatial overlap (km\u00b2)",
+            "title": "Same-category spatial overlap (km²)",
             "format": ",.0f"
           },
           {
@@ -197,7 +199,7 @@
           {
             "field": "same_category_km2",
             "type": "quantitative",
-            "title": "Same-category spatial overlap (km\u00b2)",
+            "title": "Same-category spatial overlap (km²)",
             "format": ",.0f"
           },
           {

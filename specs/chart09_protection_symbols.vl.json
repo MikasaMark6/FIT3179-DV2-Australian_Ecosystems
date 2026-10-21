@@ -11,13 +11,15 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 13,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "gridColor": "#e6e8df"
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "projection": {
@@ -66,7 +68,7 @@
       "as": "protected_area_km2"
     },
     {
-      "calculate": "datum.protected_pct < 5 ? \"0\u2013<5%\" : datum.protected_pct < 10 ? \"5\u2013<10%\" : datum.protected_pct < 17 ? \"10\u2013<17%\" : datum.protected_pct < 30 ? \"17\u2013<30%\" : \"30\u2013100%\"",
+      "calculate": "datum.protected_pct < 5 ? \"0–<5%\" : datum.protected_pct < 10 ? \"5–<10%\" : datum.protected_pct < 17 ? \"10–<17%\" : datum.protected_pct < 30 ? \"17–<30%\" : \"30–100%\"",
       "as": "protection_band"
     },
     {
@@ -132,7 +134,7 @@
             ]
           },
           "legend": {
-            "title": "Protected area (km\u00b2)",
+            "title": "Protected area (square kilometres)",
             "orient": "bottom",
             "values": [
               10000,
@@ -141,7 +143,7 @@
             ],
             "format": ",.0f",
             "direction": "horizontal",
-            "titleLimit": 300
+            "titleLimit": 390
           }
         },
         "order": {
@@ -163,7 +165,7 @@
           },
           {
             "field": "protected_area_km2",
-            "title": "Protected area (km\u00b2)",
+            "title": "Protected area (km²)",
             "type": "quantitative",
             "format": ",.0f"
           }

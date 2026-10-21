@@ -229,3 +229,28 @@ footer{padding:18px 0 24px}
 .waffle-two-column .waffle-secondary strong{font-size:32px}
 @media(max-width:850px){.map-layout{grid-template-columns:minmax(0,1fr);gap:12px}.map-layout>.chart{margin:0 auto}}
 @media(max-width:700px){.waffle-layout.waffle-two-column{grid-template-columns:minmax(0,1fr);gap:14px}.waffle-two-column .waffle-figure{max-width:320px}.waffle-two-column .waffle-guide{max-width:none}}
+
+/* Critique: spacing, visible reading notes and responsiveness. */
+header h1{text-wrap:balance;max-width:900px;line-height:1.12}
+.wrap{width:100%;max-width:1100px;padding-inline:clamp(16px,3vw,32px)}
+.chapter-lead,.chapter-intro p,.planned-part>p{max-width:72ch;text-wrap:pretty}
+.card-heading h2{text-wrap:balance;line-height:1.25}
+.reading-note{max-width:78ch;border-left:3px solid #6f978e;padding:8px 12px;margin:0 0 14px;background:#f4f7f5;color:#345047;font-size:14px;line-height:1.55}
+.map-layout>.chart,.map-layout aside{min-width:0}
+.map-layout aside{overflow-wrap:break-word}
+@media(max-width:950px){.map-layout{grid-template-columns:minmax(0,1fr)}.chart-card{padding:clamp(14px,3vw,24px)}}
+@media(max-width:680px){.reading-note{font-size:13px}.chapter-nav a{line-height:1.4}.chart-card{overflow-x:auto}}
+
+/* Round 2: teaching-team legibility pass; scale reading text without resizing chart geometry. */
+body{font-size:18px;line-height:1.6}
+header .intro,.chapter-lead,.story-bridge p,.card-heading>p{font-size:18px;line-height:1.55}
+.context p,.planned-part>p,.chapter-intro p{font-size:17px;line-height:1.6}
+.reading-note,.chart-reading,.insight p,.method,.inline{font-size:16px;line-height:1.6}
+.map-layout aside,.map-inspector p,.legend-item,.waffle-guide p,.waffle-legend{font-size:15px;line-height:1.55}
+.controls label,.controls p,#status,.chapter-nav a{font-size:14px}
+button,select{font-size:15px}
+#vg-tooltip-element{font-size:15px!important;line-height:1.5!important}
+@media(max-width:520px){body{font-size:17px}.card-heading>p,.chapter-lead{font-size:17px}.reading-note{font-size:15px}}
+
+/* Round 3: public protection teal, distinct from vegetation-family green. */
+.coverage-key.covered{background:#367c7d}

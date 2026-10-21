@@ -12,8 +12,8 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 13,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "gridColor": "#e6e8df",
       "domain": false
     },
@@ -21,6 +21,12 @@
       "font": "Arial",
       "fontSize": 13,
       "color": "#344b3f"
+    },
+    "legend": {
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "data": {
@@ -163,7 +169,7 @@
       ],
       "mark": {
         "type": "rect",
-        "color": "#315d49",
+        "color": "#367c7d",
         "cursor": "pointer"
       },
       "encoding": {

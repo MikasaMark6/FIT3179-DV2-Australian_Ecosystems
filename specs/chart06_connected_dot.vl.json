@@ -16,8 +16,8 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 14,
-      "titleFontSize": 14,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "titleFontWeight": "normal",
       "labelColor": "#344b3f",
       "titleColor": "#344b3f",
@@ -28,8 +28,10 @@
       "titlePadding": 12
     },
     "legend": {
-      "labelFontSize": 13,
-      "titleFontSize": 13
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "description": "Connected dot plot comparing estimated pre-1750 and extant NVIS v7 category areas on their common known footprint. These are two dataset themes, not a continuous time series. Data preparation supplies ten default comparison types and short labels.",
@@ -85,7 +87,7 @@
             "zero": true
           },
           "axis": {
-            "title": "Mapped area on the common known footprint (million km\u00b2)",
+            "title": "Mapped area on the common known footprint (million km²)",
             "values": [
               0,
               0.5,
@@ -114,19 +116,19 @@
           {
             "field": "estimated_pre1750_km2",
             "type": "quantitative",
-            "title": "Estimated pre-1750 area (km\u00b2)",
+            "title": "Estimated pre-1750 area (km²)",
             "format": ",.0f"
           },
           {
             "field": "extant_km2",
             "type": "quantitative",
-            "title": "Extant area (km\u00b2)",
+            "title": "Extant area (km²)",
             "format": ",.0f"
           },
           {
             "field": "net_category_area_difference_km2",
             "type": "quantitative",
-            "title": "Extant minus pre-1750 (km\u00b2)",
+            "title": "Extant minus pre-1750 (km²)",
             "format": "+,.0f"
           }
         ]
@@ -168,7 +170,7 @@
             "zero": true
           },
           "axis": {
-            "title": "Mapped area on the common known footprint (million km\u00b2)",
+            "title": "Mapped area on the common known footprint (million km²)",
             "values": [
               0,
               0.5,
@@ -194,19 +196,19 @@
           {
             "field": "estimated_pre1750_km2",
             "type": "quantitative",
-            "title": "Estimated pre-1750 area (km\u00b2)",
+            "title": "Estimated pre-1750 area (km²)",
             "format": ",.0f"
           },
           {
             "field": "extant_km2",
             "type": "quantitative",
-            "title": "Extant area (km\u00b2)",
+            "title": "Extant area (km²)",
             "format": ",.0f"
           },
           {
             "field": "net_category_area_difference_km2",
             "type": "quantitative",
-            "title": "Extant minus pre-1750 (km\u00b2)",
+            "title": "Extant minus pre-1750 (km²)",
             "format": "+,.0f"
           }
         ]
@@ -247,7 +249,7 @@
             "zero": true
           },
           "axis": {
-            "title": "Mapped area on the common known footprint (million km\u00b2)",
+            "title": "Mapped area on the common known footprint (million km²)",
             "values": [
               0,
               0.5,
@@ -273,19 +275,19 @@
           {
             "field": "estimated_pre1750_km2",
             "type": "quantitative",
-            "title": "Estimated pre-1750 area (km\u00b2)",
+            "title": "Estimated pre-1750 area (km²)",
             "format": ",.0f"
           },
           {
             "field": "extant_km2",
             "type": "quantitative",
-            "title": "Extant area (km\u00b2)",
+            "title": "Extant area (km²)",
             "format": ",.0f"
           },
           {
             "field": "net_category_area_difference_km2",
             "type": "quantitative",
-            "title": "Extant minus pre-1750 (km\u00b2)",
+            "title": "Extant minus pre-1750 (km²)",
             "format": "+,.0f"
           }
         ]

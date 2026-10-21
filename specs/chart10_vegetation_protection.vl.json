@@ -10,8 +10,8 @@
       "stroke": null
     },
     "axis": {
-      "labelFontSize": 14,
-      "titleFontSize": 14,
+      "labelFontSize": 15,
+      "titleFontSize": 15,
       "gridColor": "#e6e8df",
       "labelFont": "Arial",
       "titleFont": "Arial",
@@ -21,8 +21,10 @@
       "titleColor": "#344b3f"
     },
     "legend": {
-      "labelFontSize": 12,
-      "titleFontSize": 12
+      "labelFontSize": 14,
+      "titleFontSize": 14,
+      "labelLimit": 300,
+      "titleLimit": 380
     }
   },
   "params": [
@@ -140,7 +142,7 @@
     {
       "mark": {
         "type": "bar",
-        "color": "#315d49",
+        "color": "#367c7d",
         "cursor": "pointer"
       },
       "encoding": {
