@@ -254,3 +254,6 @@ button,select{font-size:15px}
 
 /* Round 3: public protection teal, distinct from vegetation-family green. */
 .coverage-key.covered{background:#367c7d}
+
+/* DV2: readable bridge-text line length; charts retain full width */
+.story-bridge p{max-width:68ch}
