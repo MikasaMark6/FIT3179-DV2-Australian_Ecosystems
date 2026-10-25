@@ -257,3 +257,24 @@ button,select{font-size:15px}
 
 /* DV2: readable bridge-text line length; charts retain full width */
 .story-bridge p{max-width:68ch}
+
+
+/* DV2 compact sources layout v1 */
+.sources-footer{padding-top:28px}
+.sources-header{margin-bottom:18px}
+.sources-header p{max-width:66ch;margin:6px 0 0;color:var(--muted,#63736b)}
+.sources-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0}
+.source-card{min-width:0;padding:19px 20px;border:1px solid #dae2dc;border-radius:12px;background:#f9fbf9}
+.source-card h3,.sources-ai h3{font-size:17px;line-height:1.35;margin:0 0 9px}
+.source-card p{font-size:14px;line-height:1.62;margin:0 0 10px;max-width:none}
+.source-card .source-links{margin:0;font-size:13px;line-height:1.7}
+.source-links a{white-space:normal;overflow-wrap:anywhere}
+.source-technical{border:1px solid #dce3dd;border-radius:10px;padding:12px 17px;margin:17px 0;background:#fff}
+.source-technical summary{cursor:pointer;font-weight:650;font-size:15px}
+.source-technical-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:7px;margin-top:12px}
+.source-technical-grid p{font-size:13px;line-height:1.65;margin:0 0 10px}
+.sources-bottom{border-top:1px solid #dbe2dc;margin-top:22px;padding-top:20px}
+.sources-ai{max-width:76ch}
+.sources-ai p{font-size:14px;line-height:1.65;margin:0 0 14px}
+.sources-footer .credit{margin:14px 0 0;font-size:13px}
+@media(max-width:750px){.sources-grid,.source-technical-grid{grid-template-columns:minmax(0,1fr)}.source-card{padding:15px 16px}}
